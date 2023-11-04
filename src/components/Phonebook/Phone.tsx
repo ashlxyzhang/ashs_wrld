@@ -1,4 +1,5 @@
 import { useState } from "react";
+import controller from "./GetTracks";
 
 interface Props {
   image: string;
@@ -7,6 +8,7 @@ interface Props {
 function Phone({ image }: Props) {
   const [clickedDigit, setClickedDigit] = useState<number>();
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [tracks, setTracks] = useState();
 
   const getDigits = (event: React.MouseEvent<HTMLImageElement>) => {
     const imgEle = event.target as HTMLImageElement;
@@ -37,6 +39,11 @@ function Phone({ image }: Props) {
     return -1;
   };
 
+  const getTracks = async () => {
+    setTracks(await controller.getTopTracks());
+    console.log(tracks);
+  };
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNumber(event.target.value);
   };
@@ -45,7 +52,7 @@ function Phone({ image }: Props) {
     <>
       <div
         className="container d-flex justify-content-center align-items-center"
-        style={{ width: 400, marginTop: "30vh", marginBottom: 50 }}
+        style={{ width: 400, marginTop: "10vh", marginBottom: 50 }}
       >
         <img
           id="phone"
@@ -54,9 +61,7 @@ function Phone({ image }: Props) {
           className="img-fluid"
           onClick={getDigits}
         />
-        <h2 style={{ paddingLeft: 40, fontFamily: "Times Now" }}>
-          Please Dial a Number.
-        </h2>
+        <h3 style={{ paddingLeft: 40 }}>Please Dial a Number.</h3>
       </div>
 
       <div className="container d-flex justify-content-center align-items-center">
@@ -69,7 +74,8 @@ function Phone({ image }: Props) {
         />
         <button
           className="btn"
-          style={{ marginLeft: 20, backgroundColor: "pink", color: "grey" }}
+          style={{ marginLeft: 20, backgroundColor: "#fce6f8", color: "grey" }}
+          onClick={getTracks}
         >
           Dial
         </button>
