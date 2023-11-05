@@ -8,7 +8,6 @@ interface Props {
 function Phone({ image }: Props) {
   const [clickedDigit, setClickedDigit] = useState<number>();
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [tracks, setTracks] = useState();
 
   const getDigits = (event: React.MouseEvent<HTMLImageElement>) => {
     const imgEle = event.target as HTMLImageElement;
@@ -37,11 +36,6 @@ function Phone({ image }: Props) {
     if (x > 187 && x < 203 && y > 159 && y < 171) return 9;
     if (x > 207 && x < 224 && y > 163 && y < 175) return 0;
     return -1;
-  };
-
-  const getTracks = async () => {
-    setTracks(await controller.getTopTracks());
-    console.log(tracks);
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,7 +69,7 @@ function Phone({ image }: Props) {
         <button
           className="btn"
           style={{ marginLeft: 20, backgroundColor: "#fce6f8", color: "grey" }}
-          onClick={getTracks}
+          // onClick={}
         >
           Dial
         </button>

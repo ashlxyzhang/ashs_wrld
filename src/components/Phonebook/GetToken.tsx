@@ -39,9 +39,7 @@ function GetToken(id: string, secret: string, redir: string) {
           .then((data) => {
             setToken(data.access_token);
           })
-          .catch((error) => {
-            console.error("Error changing auth code for access token:", error);
-          });
+          .catch((error) => {});
       }
     }
 

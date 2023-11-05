@@ -1,25 +1,57 @@
+import React, { useState } from "react";
+import Phonebook from "./Phonebook";
+
 let token: string = "";
 
 const setToken = (newToken: string) => {
   token = `Bearer ${newToken}`;
 };
 
-async function fetchWebAPI(endpoint: string, method: string) {
-  const res = await fetch(`https://api.spotify.com/${endpoint}`, {
-    headers: {
-      Authorization: token,
-    },
-    method,
-  });
-  return res.json();
-}
+const GetTracks = () => {
+  const [tracks, setTracks] = useState(null);
 
-async function getTopTracks() {
-  const res = await fetchWebAPI(
-    "v1/me/top/tracks?time_range=short_term&limit=5",
-    "GET"
+  async function fetchWebAPI(endpoint: string, method: string) {
+    try {
+      const res = await fetch(`https://api.spotify.com/${endpoint}`, {
+        headers: {
+          Authorization: token,
+        },
+        method,
+      });
+      return res.json();
+    } catch (error) {}
+  }
+
+  async function fetchTracks() {
+    const res = await fetchWebAPI(
+      "v1/me/top/tracks?time_range=short_term&limit=30",
+      "GET"
+    );
+    setTracks(res.items);
+
+    console.log(tracks);
+  }
+
+  return (
+    <>
+      {tracks === null && (
+        <div className="container d-flex justify-content-center align-items-center">
+          <button
+            className="btn"
+            style={{
+              marginTop: 20,
+              backgroundColor: "#fce6f8",
+              color: "grey",
+            }}
+            onClick={() => fetchTracks()}
+          >
+            Fetch Tracks
+          </button>
+        </div>
+      )}
+      {tracks !== null && <Phonebook tracks={tracks} />}
+    </>
   );
-  return res.items;
-}
+};
 
-export default { getTopTracks, setToken };
+export default { GetTracks, setToken };

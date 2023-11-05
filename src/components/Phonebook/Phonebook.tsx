@@ -1,33 +1,60 @@
 import React, { useState } from "react";
 import controller from "./GetTracks";
 
-const getStuff = () => {
-  return controller.getTopTracks();
-};
+interface Props {
+  tracks: any;
+}
 
-const Phonebook = () => {
+const Phonebook = ({ tracks }: Props) => {
+  console.log(tracks[0]);
+
   return (
     <>
       <div
         className="container d-flex justify-content-center align-items-center"
-        style={{ marginTop: 60 }}
+        style={{ marginTop: 30 }}
       >
         <h1>Phonebook</h1>
       </div>
       <div
         className="container d-flex justify-content-center align-items-center"
         style={{
-          width: "70vw",
+          width: "75vw",
           border: "1px dashed",
           backgroundColor: "#fce6f8",
         }}
       >
-        ### Name : Artist : Album
-        <ul style={{ color: "grey", margin: 15 }}>
-          <li>001 Silver Soul : Beach House: Teen Dream</li>
-          <li>002 Die For You : Joji : SMITHEREENS</li>
-          <li>003 Famous : Kanye West : Life of Pablo</li>
-        </ul>
+        <div style={{ color: "grey" }}>
+          Number
+          <br /> -------------
+          {tracks.map((track: any, index: number) => (
+            <li style={{ listStyle: "none" }}>
+              {(index + 1).toString().padStart(3, "0")}
+            </li>
+          ))}
+        </div>
+        <div style={{ color: "grey", margin: 15 }}>
+          Name
+          <br /> ---------------------------------------------------------
+          {tracks.map((track: any) => (
+            <li style={{ listStyle: "none" }}>{track.name}</li>
+          ))}
+        </div>
+        <div style={{ color: "grey", margin: 15 }}>
+          Artist
+          <br /> -------------------------------------
+          {tracks.map((track: any) => (
+            <li style={{ listStyle: "none" }}>{track.artists[0].name}</li>
+          ))}
+        </div>
+        <div style={{ color: "grey", margin: 15 }}>
+          Album
+          <br />{" "}
+          -----------------------------------------------------------------
+          {tracks.map((track: any) => (
+            <li style={{ listStyle: "none" }}>{track.album.name}</li>
+          ))}
+        </div>
       </div>
     </>
   );

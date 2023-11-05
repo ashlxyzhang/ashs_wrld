@@ -1,5 +1,4 @@
 import GetToken from "./GetToken.js";
-import React from "react";
 import controller from "./GetTracks.tsx";
 
 function Login() {
@@ -25,7 +24,6 @@ function Login() {
   );
 
   const token = GetToken(id, secret, redir);
-  console.log(token);
   controller.setToken(token);
 
   return <>{token === "" ? loginBtn : null}</>;
