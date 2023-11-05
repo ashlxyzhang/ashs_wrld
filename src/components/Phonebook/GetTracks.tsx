@@ -28,8 +28,6 @@ const GetTracks = () => {
       "GET"
     );
     setTracks(res.items);
-
-    console.log(tracks);
   }
 
   return (

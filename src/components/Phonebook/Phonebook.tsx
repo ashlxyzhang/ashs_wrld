@@ -7,7 +7,6 @@ interface Props {
 
 const Phonebook = ({ tracks }: Props) => {
   console.log(tracks[0]);
-
   return (
     <>
       <div
@@ -19,40 +18,77 @@ const Phonebook = ({ tracks }: Props) => {
       <div
         className="container d-flex justify-content-center align-items-center"
         style={{
-          width: "75vw",
+          width: "65vw",
           border: "1px dashed",
           backgroundColor: "#fce6f8",
+          paddingTop: 40,
         }}
       >
-        <div style={{ color: "grey" }}>
-          Number
-          <br /> -------------
+        <div style={{ color: "grey", margin: 15, marginTop: 60 }}>
           {tracks.map((track: any, index: number) => (
-            <li style={{ listStyle: "none" }}>
+            <li
+              key={index}
+              style={{ listStyle: "none", height: 70 }}
+              className="d-flex align-items-center"
+            >
+              <img src={track.album.images[2].url} alt="" />
+            </li>
+          ))}
+        </div>
+        <div style={{ color: "grey", margin: 15 }}>
+          Number
+          <br /> -----------
+          {tracks.map((track: any, index: number) => (
+            <li
+              key={index}
+              className="d-flex align-items-center"
+              style={{ listStyle: "none", height: 70 }}
+            >
               {(index + 1).toString().padStart(3, "0")}
             </li>
           ))}
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Name
-          <br /> ---------------------------------------------------------
-          {tracks.map((track: any) => (
-            <li style={{ listStyle: "none" }}>{track.name}</li>
+          <br /> ----------------------------------------------------
+          {tracks.map((track: any, index: number) => (
+            <li
+              key={index}
+              style={{ listStyle: "none", height: 70 }}
+              className="d-flex align-items-center"
+            >
+              {track.name}
+            </li>
           ))}
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Artist
           <br /> -------------------------------------
-          {tracks.map((track: any) => (
-            <li style={{ listStyle: "none" }}>{track.artists[0].name}</li>
+          {tracks.map((track: any, index: number) => (
+            <li
+              key={index}
+              style={{ listStyle: "none", height: 70 }}
+              className="d-flex align-items-center"
+            >
+              {track.artists[0].name}
+            </li>
           ))}
         </div>
-        <div style={{ color: "grey", margin: 15 }}>
+        <div
+          className="align-items-center"
+          style={{ color: "grey", margin: 15 }}
+        >
           Album
           <br />{" "}
           -----------------------------------------------------------------
-          {tracks.map((track: any) => (
-            <li style={{ listStyle: "none" }}>{track.album.name}</li>
+          {tracks.map((track: any, index: number) => (
+            <li
+              key={index}
+              style={{ listStyle: "none", height: 70 }}
+              className="d-flex align-items-center"
+            >
+              {track.album.name}
+            </li>
           ))}
         </div>
       </div>
