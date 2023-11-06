@@ -1,11 +1,11 @@
-import { useState } from "react";
-import controller from "./GetTracks";
+import { useRef, useState } from "react";
 
 interface Props {
   image: string;
+  tracks: any;
 }
 
-function Phone({ image }: Props) {
+function Phone({ image, tracks }: Props) {
   const [clickedDigit, setClickedDigit] = useState<number>();
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -14,8 +14,6 @@ function Phone({ image }: Props) {
     const rect = imgEle.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-
-    console.log(`Clicked: ${x}, ${y}`);
 
     const digit = digitPosition(x, y);
     if (digit != -1) {
@@ -42,6 +40,17 @@ function Phone({ image }: Props) {
     setPhoneNumber(event.target.value);
   };
 
+  const playSong = (phone: number) => {
+    const dial = new Audio("/Phonebook/dial.mp3");
+    const song = new Audio(tracks[phone].preview_url);
+    song.volume = 0.5;
+
+    setPhoneNumber("");
+
+    dial.onended = () => song.play();
+    dial.play();
+  };
+
   return (
     <>
       <div
@@ -66,10 +75,11 @@ function Phone({ image }: Props) {
           value={phoneNumber}
           onChange={handleInputChange}
         />
+
         <button
           className="btn"
           style={{ marginLeft: 20, backgroundColor: "#fce6f8", color: "grey" }}
-          // onClick={}
+          onClick={() => playSong(parseInt(phoneNumber, 10) - 1)}
         >
           Dial
         </button>

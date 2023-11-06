@@ -1,5 +1,5 @@
 import GetToken from "./GetToken.js";
-import controller from "./GetTracks.tsx";
+import controller from "./Tracks.tsx";
 
 function Login() {
   const id = import.meta.env.VITE_SPOTIFY_CLIENT_ID;

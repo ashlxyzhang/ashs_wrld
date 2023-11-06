@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Phonebook from "./Phonebook";
+import Phone from "./Phone";
+import Login from "./Login";
 
 let token: string = "";
 
@@ -7,7 +9,7 @@ const setToken = (newToken: string) => {
   token = `Bearer ${newToken}`;
 };
 
-const GetTracks = () => {
+const Tracks = () => {
   const [tracks, setTracks] = useState(null);
 
   async function fetchWebAPI(endpoint: string, method: string) {
@@ -32,6 +34,8 @@ const GetTracks = () => {
 
   return (
     <>
+      <Phone image="/Phonebook/rotary_phone.webp" tracks={tracks} />
+      <Login />
       {tracks === null && (
         <div className="container d-flex justify-content-center align-items-center">
           <button
@@ -52,4 +56,4 @@ const GetTracks = () => {
   );
 };
 
-export default { GetTracks, setToken };
+export default { Tracks, setToken };

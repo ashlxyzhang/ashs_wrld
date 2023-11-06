@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import controller from "./GetTracks";
-
 interface Props {
   tracks: any;
 }
 
 const Phonebook = ({ tracks }: Props) => {
-  console.log(tracks[0]);
   return (
     <>
       <div
@@ -18,7 +14,7 @@ const Phonebook = ({ tracks }: Props) => {
       <div
         className="container d-flex justify-content-center align-items-center"
         style={{
-          width: "65vw",
+          width: "70vw",
           border: "1px dashed",
           backgroundColor: "#fce6f8",
           paddingTop: 40,
@@ -35,9 +31,9 @@ const Phonebook = ({ tracks }: Props) => {
             </li>
           ))}
         </div>
-        <div style={{ color: "grey", margin: 15 }}>
+        <div style={{ color: "grey", margin: 15, width: 60 }}>
           Number
-          <br /> -----------
+          <br /> ----------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
@@ -50,7 +46,7 @@ const Phonebook = ({ tracks }: Props) => {
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Name
-          <br /> ----------------------------------------------------
+          <br /> --------------------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
@@ -63,7 +59,7 @@ const Phonebook = ({ tracks }: Props) => {
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Artist
-          <br /> -------------------------------------
+          <br /> ---------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
@@ -79,8 +75,7 @@ const Phonebook = ({ tracks }: Props) => {
           style={{ color: "grey", margin: 15 }}
         >
           Album
-          <br />{" "}
-          -----------------------------------------------------------------
+          <br /> ----------------------------------------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
