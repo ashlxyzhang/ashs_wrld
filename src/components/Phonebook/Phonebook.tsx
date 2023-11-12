@@ -46,7 +46,7 @@ const Phonebook = ({ tracks }: Props) => {
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Name
-          <br /> --------------------------------------
+          <br /> -----------------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
