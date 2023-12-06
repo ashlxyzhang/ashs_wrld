@@ -42,7 +42,7 @@ const Tracks = () => {
             className="btn"
             style={{
               marginTop: 20,
-              backgroundColor: "#fce6f8",
+              backgroundColor: "#feebff",
               color: "grey",
             }}
             onClick={() => fetchTracks()}

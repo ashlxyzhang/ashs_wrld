@@ -15,29 +15,17 @@ const App = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/phonebook" element={<Tracks.Tracks />} />
-          <Route
-            path="/italy"
-            element={<ItalyGrid images={italyImages} captions={italyCaps} />}
-          />
+          <Route path="/" element={<Home />}>
+            <Route path="phonebook" element={<Tracks.Tracks />} />
+            <Route
+              path="italy"
+              element={<ItalyGrid images={italyImages} captions={italyCaps} />}
+            />
+          </Route>
         </Routes>
       </Router>
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/phonebook">Phonebook</Link>
-          </li>
-          <li>
-            <Link to="/italy">Italy Scrapbook</Link>
-          </li>
-        </ul>
-      </nav> */}
-      {/* <ItalyGrid images={italyImages} captions={italyCaps} /> */}
-      {/*<Tracks.Tracks />*/}
+      {/* <ItalyGrid images={italyImages} captions={italyCaps} />
+      <Tracks.Tracks /> */}
     </>
   );
 };

@@ -16,7 +16,7 @@ const Phonebook = ({ tracks }: Props) => {
         style={{
           width: "70vw",
           border: "1px dashed",
-          backgroundColor: "#fce6f8",
+          backgroundColor: "#fff7ff",
           paddingTop: 40,
         }}
       >

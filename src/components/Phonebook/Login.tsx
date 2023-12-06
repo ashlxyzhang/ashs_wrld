@@ -16,7 +16,7 @@ function Login() {
       <a
         href={spotifyAuthUrl}
         className="btn"
-        style={{ backgroundColor: "#fce6f8", color: "grey" }}
+        style={{ backgroundColor: "#feebff", color: "grey" }}
       >
         Login with Spotify
       </a>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import galaxy from "/Home/galaxy.txt";
 
 const Home = () => {
@@ -14,6 +14,22 @@ const Home = () => {
 
   return (
     <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/phonebook">Phonebook</Link>
+          </li>
+          <li>
+            <Link to="/italy">Italy Scrapbook</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Outlet />
+
       <div
         className="container d-flex align-items-center justify-content-center"
         style={{ whiteSpace: "pre-wrap", fontFamily: "monospace", fontSize: 4 }}

@@ -78,7 +78,7 @@ function Phone({ image, tracks }: Props) {
 
         <button
           className="btn"
-          style={{ marginLeft: 20, backgroundColor: "#fce6f8", color: "grey" }}
+          style={{ marginLeft: 20, backgroundColor: "#feebff", color: "grey" }}
           onClick={() => playSong(parseInt(phoneNumber, 10) - 1)}
         >
           Dial
