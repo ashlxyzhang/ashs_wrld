@@ -20,12 +20,22 @@ const Home = () => {
         </video>
         <div className="screen"></div>
       </div>
-      <div
+      {/* <div
         className="container d-flex align-items-center justify-content-center"
         style={{ whiteSpace: "pre-wrap", fontFamily: "monospace", fontSize: 4 }}
       >
         {galaxyText}
-      </div>
+      </div> */}
+      <section className="caption">
+        <div className="wrapper">
+          <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
+          <h1 className="title">୨୧ ASHS_WRLD ୨୧</h1>
+          <span>
+            The universe created by 🍎. <br /> It can't represent 1% of her.
+          </span>
+          <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
+        </div>
+      </section>
     </>
   );
 };

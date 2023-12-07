@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "Times Now";
+    src: url("/Styling/TimesNow-Light.woff2") format("woff");
+}
+
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times Now', Times, serif;
 }
 
 .bg {
@@ -26,4 +31,29 @@ body {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+}
+
+.caption {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 1em;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.title {
+    position: fixed;
+    top: 47.5%;
+    width: 100%;
 }
