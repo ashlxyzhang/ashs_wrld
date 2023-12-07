@@ -1,9 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { Outlet, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const el = useRef(null);
+  const nav = useNavigate();
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -27,9 +28,13 @@ const Home = () => {
     };
   });
 
+  const screenClick = () => {
+    nav("/galaxy");
+  };
+
   return (
     <>
-      <div className="bg">
+      <div onClick={screenClick} style={{ cursor: "pointer" }} className="bg">
         <video loop muted autoPlay>
           <source src="/Home/home.mp4" type="video/mp4" />
         </video>

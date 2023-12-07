@@ -50,6 +50,7 @@ body {
     justify-content: space-between;
     text-align: center;
     align-items: end;
+    cursor: pointer;
 }
 
 .center {
