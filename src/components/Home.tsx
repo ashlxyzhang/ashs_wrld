@@ -14,22 +14,12 @@ const Home = () => {
 
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/phonebook">Phonebook</Link>
-          </li>
-          <li>
-            <Link to="/italy">Italy Scrapbook</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
-
+      <div className="bg">
+        <video loop muted autoPlay>
+          <source src="/Home/home.mp4" type="video/mp4" />
+        </video>
+        <div className="screen"></div>
+      </div>
       <div
         className="container d-flex align-items-center justify-content-center"
         style={{ whiteSpace: "pre-wrap", fontFamily: "monospace", fontSize: 4 }}
