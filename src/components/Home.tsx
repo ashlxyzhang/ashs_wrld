@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const el = useRef(null);
   const nav = useNavigate();
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -12,13 +13,15 @@ const Home = () => {
         "DAPPLED SUNLIGHT",
         "SILVER WHEAT" /* Fitzgerald */,
         "BELLS CHIME",
+        "ANGELS WEEP",
         "CAUGHT IN THE CURRENT",
+        "PASSING TIME",
         "LOVE THE SINNER" /* Coraline */,
         "HATE THE SIN",
       ],
       typeSpeed: 35,
       fadeOut: true,
-      backDelay: 1200,
+      backDelay: 1350,
       loop: true,
       showCursor: false,
     });
@@ -29,12 +32,19 @@ const Home = () => {
   });
 
   const screenClick = () => {
-    nav("/galaxy");
+    setFadeOut(true);
+    setTimeout(() => {
+      nav("/galaxy");
+    }, 500);
   };
 
   return (
-    <>
-      <div onClick={screenClick} style={{ cursor: "pointer" }} className="bg">
+    <div
+      className={fadeOut ? "fade-out" : ""}
+      onClick={screenClick}
+      style={{ cursor: "pointer" }}
+    >
+      <div className="bg">
         <video loop muted autoPlay>
           <source src="/Home/home.mp4" type="video/mp4" />
         </video>
@@ -54,7 +64,7 @@ const Home = () => {
           <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
