@@ -72,7 +72,8 @@ body {
 .galaxy {
     white-space: pre-wrap;
     font-family: monospace;
-    font-size: 4px;
+    font-weight: bolder;
+    font-size: 5px;
     animation: fade-in 3s;
 }
 
