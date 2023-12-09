@@ -90,3 +90,21 @@ body {
     font-weight: lighter;
     font-size: 15px;
 }
+
+.row > div {
+    text-align: end;
+    height: 130px;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.row .empty {
+    border: none;
+}
+
+img {
+    margin-top: -20px;
+    width: 100px;
+}
