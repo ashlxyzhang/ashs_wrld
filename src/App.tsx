@@ -28,7 +28,7 @@ const App = () => {
           />
           <Route path="advent" element={<Advent />} />
           <Route path="advent/8" element={<Eight />} />
-          <Route path="advent/8" element={<Nine />} />
+          <Route path="advent/9" element={<Nine />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />

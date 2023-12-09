@@ -86,9 +86,35 @@ body {
 
 .apple-tree {
     white-space: pre-wrap;
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
     font-size: 15px;
+    height: 100vh;
+}
+
+.fishing {
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    color: #6189c9;
+    height: 100vh;
+}
+
+.fishing > button {
+    margin: 20px;
+    background-color: #e8cfae;
+    border: 2px #523815 dashed;
+}
+
+.move-rod {
+    animation: moveRod 2s;
+}
+
+@keyframes moveRod {
+    0%, 50%, 100% {
+        transform: translateY(0px);
+    } 25%, 75% {
+        transform: translateY(20px);
+    }
 }
 
 .row > div {
@@ -108,3 +134,4 @@ img {
     margin-top: -20px;
     width: 100px;
 }
+

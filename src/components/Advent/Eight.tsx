@@ -14,10 +14,7 @@ const Eight = () => {
 
   return (
     <>
-      <div
-        className="apple-tree d-flex flex-column justify-content-center align-items-center"
-        style={{ height: "100vh" }}
-      >
+      <div className="apple-tree d-flex flex-column justify-content-center align-items-center">
         <p>
           {
             "          # #### ####\n        ### \\/#|### |/####\n        ####\\/#/ \\||/##/_/##/_#\n    #####  \\/###|/ \\/ # ###\n     ##_\\_#\\_\\## | #/###_/_####\n  ## #### # \\ #| /  #### ##/##\n   __#_--###`  |{,###---###-~\n                 \\  }{"
