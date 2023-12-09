@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Galaxy = () => {
   const [galaxyText, setGalaxyText] = useState("");
@@ -11,8 +12,21 @@ const Galaxy = () => {
   }, []);
 
   return (
-    <div className="galaxy container d-flex align-items-center justify-content-center">
-      {galaxyText}
+    <div className="galaxy">
+      <nav>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/advent">Advent</Link>
+        </li>
+      </nav>
+      <div
+        className="container d-flex align-items-center justify-content-center"
+        style={{ fontSize: 5 }}
+      >
+        {galaxyText}
+      </div>
     </div>
   );
 };

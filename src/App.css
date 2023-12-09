@@ -73,7 +73,6 @@ body {
     white-space: pre-wrap;
     font-family: monospace;
     font-weight: bolder;
-    font-size: 5px;
     animation: fade-in 3s;
 }
 
@@ -83,4 +82,11 @@ body {
     } to {
         opacity: 1;
     }
+}
+
+.apple-tree {
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-weight: lighter;
+    font-size: 15px;
 }

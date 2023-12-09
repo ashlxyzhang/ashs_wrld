@@ -7,6 +7,7 @@ import GetItalyCaps from "./components/Italy/ItalyCaps";
 import Tracks from "./components/Phonebook/Tracks";
 import Home from "./components/Home";
 import Galaxy from "./components/Galaxy";
+import Eight from "./components/Advent/eight";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -23,6 +24,7 @@ const App = () => {
             path="italy"
             element={<ItalyGrid images={italyImages} captions={italyCaps} />}
           />
+          <Route path="advent" element={<Eight />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />
