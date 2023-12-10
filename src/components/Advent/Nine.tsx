@@ -4,7 +4,7 @@ const Nine = () => {
   const [clicked, setClicked] = useState(false);
   const [getObj, setGetObj] = useState(false);
   const [obj, setObj] = useState("");
-  const [inv, setInv] = useState(["", "", "", "", "", ""]);
+  const [inv, setInv] = useState(["", "", "", "", "", "", "", "", ""]);
   const [index, setIndex] = useState(0);
 
   const objs = "🐡𓇼🐟💫🫧🐚🦀💌🌟🐠🐙🦑🪸⭐️🌀";
@@ -27,10 +27,12 @@ const Nine = () => {
   };
 
   const addInv = (ind: number) => {
-    const updatedInv = [...inv];
-    updatedInv[ind] = obj;
-    setIndex(index + 1);
-    setInv(updatedInv);
+    if (obj !== "") {
+      const updatedInv = [...inv];
+      updatedInv[ind] = obj;
+      setIndex(index + 1);
+      setInv(updatedInv);
+    }
   };
 
   return (
@@ -54,6 +56,7 @@ const Nine = () => {
         </div>
       </div>
       <div className="inventory container text-center flex-wrap">
+        <img src="/Advent/layout3.png" alt="" />
         <div className="row">
           <h4>Inventory</h4>
         </div>
