@@ -27,7 +27,7 @@ const Nine = () => {
   };
 
   const addInv = (ind: number) => {
-    if (obj !== "") {
+    if (obj !== "" && ind < 9) {
       const updatedInv = [...inv];
       updatedInv[ind] = obj;
       setIndex(index + 1);

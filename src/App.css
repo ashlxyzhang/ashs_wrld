@@ -157,3 +157,10 @@ img {
     width: 100px;
 }
 
+#waffle {
+    width: 80%;
+}
+
+#pieces > img {
+    margin: 20px;
+}
