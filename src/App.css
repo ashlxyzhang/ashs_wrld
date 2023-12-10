@@ -99,8 +99,8 @@ body {
     height: 100vh;
 }
 
-.fishing > button {
-    margin: 20px;
+.fishing > div > button {
+    margin: 10px;
     background-color: #e8cfae;
     border: 2px #523815 dashed;
 }
@@ -120,6 +120,15 @@ body {
 .fished {
     white-space: pre-wrap;
     font-size: 30px;
+}
+
+.inventory {
+    width: 30%;
+    margin: 20px;
+}
+
+.inventory .row > div {
+    height: 90px;
 }
 
 .row > div {

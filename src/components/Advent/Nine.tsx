@@ -3,6 +3,9 @@ import React, { useState } from "react";
 const Nine = () => {
   const [clicked, setClicked] = useState(false);
   const [getObj, setGetObj] = useState(false);
+  const [obj, setObj] = useState("");
+  const [inv, setInv] = useState(["", "", "", "", "", ""]);
+  const [index, setIndex] = useState(0);
 
   const objs = "🐡𓇼🐟💫🫧🐚🦀💌🌟🐠🐙🦑🪸⭐️🌀";
 
@@ -19,7 +22,15 @@ const Nine = () => {
     setTimeout(() => {
       setClicked(false);
       setGetObj(true);
+      setObj(findObj(objs));
     }, 2000);
+  };
+
+  const addInv = (ind: number) => {
+    const updatedInv = [...inv];
+    updatedInv[ind] = obj;
+    setIndex(index + 1);
+    setInv(updatedInv);
   };
 
   return (
@@ -33,13 +44,35 @@ const Nine = () => {
           src="/Advent/fishing_pole.webp"
           alt="fishing pole"
         />
-        <span className={`fished ${getObj ? "" : "d-none"}`}>{`  ${findObj(
-          objs
-        )}`}</span>
+        <span className={`fished ${getObj ? "" : "d-none"}`}>{`  ${obj}`}</span>
         {
           "   ,(   ,(   ,(   ,(   ,(   ,(   ,(   ,(\n`-'  `-'  `-'  `-'  `-'  `-'  `-'  `-'  `"
         }
-        <button onClick={moveRod}>Fish</button>
+        <div>
+          <button onClick={moveRod}>Fish</button>
+          <button onClick={() => addInv(index)}>Add to Inventory</button>
+        </div>
+      </div>
+      <div className="inventory container text-center flex-wrap">
+        <div className="row">
+          <h4>Inventory</h4>
+        </div>
+        <div className="row justify-content-center">
+          {inv.map((item, index) => (
+            <div
+              key={index}
+              className="col-3"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                fontSize: 45,
+                alignItems: "center",
+              }}
+            >
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
