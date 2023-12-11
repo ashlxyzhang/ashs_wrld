@@ -50,20 +50,30 @@ const Ten = () => {
   };
 
   useEffect(() => {
-    if (eventVal === "sunny") return getClouds(10);
-    else if (eventVal === "cloudy") return getClouds(25);
+    if (eventVal === "sunny") getClouds(10);
+    else if (eventVal === "partly-sunny") getClouds(20);
+    else if (eventVal === "cloudy") getClouds(30);
   }, [eventVal]);
 
   return (
     <div className="wrap">
       <select value={eventVal} onChange={handleChange} id="weather">
         <option value="sunny">☀️</option>
+        <option value="partly-sunny">⛅️</option>
         <option value="cloudy">☁️</option>
       </select>
       {eventVal === "sunny" && (
         <div className="sun-container">
           <span className="dot"></span>
           <span className="ascii sun">{sun}</span>
+        </div>
+      )}
+      {eventVal === "partly-sunny" && (
+        <div className="sun-container">
+          <span className="dot" style={{ backgroundColor: "#fde2a1" }}></span>
+          <span className="ascii sun" style={{ color: "#EFB93A" }}>
+            {sun}
+          </span>
         </div>
       )}
       <div className="clouds">
