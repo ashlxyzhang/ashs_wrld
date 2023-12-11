@@ -12,6 +12,7 @@ import Eight from "./components/Advent/Eight";
 import Nine from "./components/Advent/Nine";
 import One from "./components/Advent/One";
 import Ten from "./components/Advent/Ten";
+import Two from "./components/Advent/Two";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -32,6 +33,7 @@ const App = () => {
           />
           <Route path="advent" element={<Advent />} />
           <Route path="advent/1" element={<One />} />
+          <Route path="advent/2" element={<Two />} />
           <Route path="advent/8" element={<Eight />} />
           <Route path="advent/9" element={<Nine />} />
           <Route path="advent/10" element={<Ten />} />

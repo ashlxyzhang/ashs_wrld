@@ -42,11 +42,6 @@ const One = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(piece);
-    console.log(pieces);
-  }, [piece, pieces]);
-
   return (
     <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
       <span>Click the strawberry or the cream to choose a piece.</span>

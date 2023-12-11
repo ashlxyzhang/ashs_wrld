@@ -19,7 +19,9 @@ const Advent = () => {
               alt="strawberry cake"
             />
           </div>
-          <div className="col">2</div>
+          <div className="col">
+            <Link to={"2"}>2</Link>
+          </div>
         </div>
         <div className="row">
           <div className="col">3</div>
@@ -28,7 +30,7 @@ const Advent = () => {
           <div className="col">6</div>
           <div className="col">7</div>
           <div className="col">
-            <Link to="/advent/8">8</Link>
+            <Link to="8">8</Link>
             <br />
             <img
               className="mx-auto d-block"
@@ -37,7 +39,7 @@ const Advent = () => {
             />
           </div>
           <div className="col">
-            <Link to="/advent/9">9</Link>
+            <Link to="9">9</Link>
             <br />
             <img
               className="mx-auto d-block"
