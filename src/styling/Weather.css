@@ -62,6 +62,11 @@
     left: 1080px;
 }
 
+.garden4 {
+    bottom: 50px;
+    left: 1620px;
+}
+
 .clouds {
     animation: marquee 250s infinite linear;
 }

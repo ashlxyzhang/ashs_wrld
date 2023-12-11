@@ -116,6 +116,7 @@ const Ten = () => {
         <span className="ascii garden">{garden}</span>
         <span className="ascii garden2">{garden}</span>
         <span className="ascii garden3">{garden}</span>
+        <span className="ascii garden4">{garden}</span>
       </div>
     </div>
   );

@@ -7,12 +7,14 @@ import GetItalyCaps from "./components/Italy/ItalyCaps";
 import Tracks from "./components/Phonebook/Tracks";
 import Home from "./components/Home";
 import Galaxy from "./components/Galaxy";
+
 import Advent from "./components/Advent/Advent";
+import One from "./components/Advent/One";
+import Two from "./components/Advent/Two";
 import Eight from "./components/Advent/Eight";
 import Nine from "./components/Advent/Nine";
-import One from "./components/Advent/One";
 import Ten from "./components/Advent/Ten";
-import Two from "./components/Advent/Two";
+import Eleven from "./components/Advent/Eleven";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -37,6 +39,7 @@ const App = () => {
           <Route path="advent/8" element={<Eight />} />
           <Route path="advent/9" element={<Nine />} />
           <Route path="advent/10" element={<Ten />} />
+          <Route path="advent/11" element={<Eleven />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />
