@@ -1,0 +1,12 @@
+#waffle {
+    width: 80%;
+}
+
+.placed,
+#pieces > img {
+    width: 90px;
+}
+
+#pieces > img {
+    margin: 20px;
+}

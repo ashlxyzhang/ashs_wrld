@@ -11,6 +11,7 @@ import Advent from "./components/Advent/Advent";
 import Eight from "./components/Advent/Eight";
 import Nine from "./components/Advent/Nine";
 import One from "./components/Advent/One";
+import Ten from "./components/Advent/Ten";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -20,9 +21,11 @@ const App = () => {
     <>
       <Router>
         <Routes>
+          <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="galaxy" element={<Galaxy />} />
           <Route path="phonebook" element={<Tracks.Tracks />} />
+          <Route path="auth/*" element={<Tracks.Tracks />} />
           <Route
             path="italy"
             element={<ItalyGrid images={italyImages} captions={italyCaps} />}
@@ -31,6 +34,7 @@ const App = () => {
           <Route path="advent/1" element={<One />} />
           <Route path="advent/8" element={<Eight />} />
           <Route path="advent/9" element={<Nine />} />
+          <Route path="advent/10" element={<Ten />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />

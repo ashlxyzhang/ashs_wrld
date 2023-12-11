@@ -75,7 +75,7 @@ const Phonebook = ({ tracks }: Props) => {
           style={{ color: "grey", margin: 15 }}
         >
           Album
-          <br /> ----------------------------------------------------------
+          <br /> -----------------------------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}

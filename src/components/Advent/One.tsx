@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../../styling/Waffle.css";
 
 interface Sticker {
   type: string;
@@ -29,14 +30,16 @@ const One = () => {
 
   const mouseUp = () => {
     setMoving(false);
-    setPieces((pieces) => [
-      ...pieces,
-      {
-        type: piece,
-        x: startPos.x + offset.x,
-        y: startPos.y + offset.y,
-      },
-    ]);
+    if (piece !== "") {
+      setPieces((pieces) => [
+        ...pieces,
+        {
+          type: piece,
+          x: startPos.x + offset.x,
+          y: startPos.y + offset.y,
+        },
+      ]);
+    }
   };
 
   useEffect(() => {
@@ -59,13 +62,14 @@ const One = () => {
         />
         {pieces.map((piece, index) => (
           <img
+            className="placed"
             key={index}
             src={piece.type}
             alt="piece copy"
             style={{
               position: "fixed",
-              left: `${piece.x - 50}px`,
-              top: `${piece.y - 30}px`,
+              left: `${piece.x - 45}px`,
+              top: `${piece.y - 50}px`,
             }}
           />
         ))}

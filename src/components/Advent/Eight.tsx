@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
+import "../../styling/Apple_Tree.css";
 
 const Eight = () => {
   const [fallen, setFallen] = useState(false);

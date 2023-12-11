@@ -1,0 +1,61 @@
+.bg {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: pink;
+    z-index: 9999;
+    opacity: 30%
+}
+
+.bg video {
+    filter: blur(2px);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.caption {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 1em;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: end;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}

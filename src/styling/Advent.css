@@ -1,0 +1,17 @@
+.row .col {
+    text-align: end;
+    height: 130px;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.row .empty {
+    border: none;
+}
+
+.d-block {
+    margin-top: -20px;
+    width: 100px;
+}

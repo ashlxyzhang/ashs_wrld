@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../styling/Galaxy.css";
 
 const Galaxy = () => {
   const [galaxyText, setGalaxyText] = useState("");
@@ -19,6 +20,9 @@ const Galaxy = () => {
         </li>
         <li>
           <Link to="/advent">Advent</Link>
+        </li>
+        <li>
+          <Link to="/phonebook">Phonebook</Link>
         </li>
       </nav>
       <div

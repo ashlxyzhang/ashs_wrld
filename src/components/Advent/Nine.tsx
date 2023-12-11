@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../styling/Fishing.css";
 
 const Nine = () => {
   const [clicked, setClicked] = useState(false);
@@ -55,12 +56,12 @@ const Nine = () => {
           <button onClick={() => addInv(index)}>Add to Inventory</button>
         </div>
       </div>
-      <div className="inventory container text-center flex-wrap">
+      <div className="container text-center flex-wrap inventory">
         <img src="/Advent/layout3.png" alt="" />
         <div className="row">
           <h4>Inventory</h4>
         </div>
-        <div className="row justify-content-center">
+        <div className="row justify-content-center grid">
           {inv.map((item, index) => (
             <div
               key={index}

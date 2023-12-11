@@ -1,0 +1,87 @@
+.wrap {
+    overflow-x: clip;
+}
+
+.ascii {
+    white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 120%;
+    position: fixed;
+}
+
+#weather {
+    z-index: 9999;
+    font-size: 40px;
+    padding: 13px 15px 10px 15px;
+    margin: 20px;
+    background-color: rgba(255, 243, 245, 0.861);
+    border: 1px dashed rgb(255, 176, 189);
+    position: fixed;
+    right: 0;
+}
+
+.cloud {
+    position: fixed;
+}
+
+.dot {
+    width: 70px;
+    height: 70px;
+    background-color: #EFB93A;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    left: 192px;
+    top: 175px;
+}
+
+.sun {
+    z-index: -1;
+    color: #e37d1e;
+    left: 100px;
+    top: 80px;
+}
+
+.gardens {
+    color: green;
+}
+
+.garden {
+    bottom: 50px;
+}
+
+.garden2 {
+    bottom: 50px;
+    left: 540px;
+}
+
+.garden3 {
+    bottom: 50px;
+    left: 1080px;
+}
+
+.clouds {
+    animation: marquee 250s infinite linear;
+}
+
+.clouds2 {
+    animation: marquee2 250s infinite linear;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0)
+    } 100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(100%)
+    } 100% {
+        transform: translateX(0%);
+    }
+}
