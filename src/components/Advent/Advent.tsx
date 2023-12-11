@@ -55,14 +55,21 @@ const Advent = () => {
         </div>
         <div className="row">
           <div className="col">
-            <Link to="/advent/10">10</Link>
+            <Link to="10">10</Link>
             <img
               className="mx-auto d-block"
               src="/Advent/day_10.jpeg"
               alt="cloud"
             />
           </div>
-          <div className="col">11</div>
+          <div className="col">
+            <Link to="11">11</Link>
+            <img
+              className="mx-auto d-block"
+              src="/Advent/day_11.jpeg"
+              alt="cloud"
+            />
+          </div>
           <div className="col">12</div>
           <div className="col">13</div>
           <div className="col">14</div>

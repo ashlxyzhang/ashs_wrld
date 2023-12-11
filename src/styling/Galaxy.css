@@ -2,6 +2,9 @@
     white-space: pre-wrap;
     font-family: monospace;
     font-weight: bolder;
+}
+
+.fade-in {
     animation: fade-in 3s;
 }
 

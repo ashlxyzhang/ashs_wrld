@@ -13,7 +13,7 @@ const Galaxy = () => {
   }, []);
 
   return (
-    <div className="galaxy">
+    <div className="galaxy fade-in">
       <nav>
         <li>
           <Link to="/">Home</Link>

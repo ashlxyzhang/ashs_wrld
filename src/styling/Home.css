@@ -1,6 +1,6 @@
 .bg {
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     width: 100vw;
     height: auto;
     object-fit: cover;
