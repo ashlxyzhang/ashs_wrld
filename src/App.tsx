@@ -16,10 +16,21 @@ import Nine from "./components/Advent/Nine";
 import Ten from "./components/Advent/Ten";
 import Eleven from "./components/Advent/Eleven";
 import Three from "./components/Advent/Three";
+import Twelve from "./components/Advent/Twelve";
 
 const App = () => {
   const italyImages = GetItalyImages();
   const italyCaps = GetItalyCaps();
+  const days = [
+    <One />,
+    <Two />,
+    <Three />,
+    <Eight />,
+    <Nine />,
+    <Ten />,
+    <Eleven />,
+    <Twelve />,
+  ];
 
   return (
     <>
@@ -42,6 +53,7 @@ const App = () => {
           <Route path="advent/9" element={<Nine />} />
           <Route path="advent/10" element={<Ten />} />
           <Route path="advent/11" element={<Eleven />} />
+          <Route path="advent/12" element={<Twelve />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />
