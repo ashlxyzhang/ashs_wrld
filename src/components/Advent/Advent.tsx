@@ -4,7 +4,10 @@ import "../../styling/Advent.css";
 const Advent = () => {
   return (
     <>
-      <div className="container mt-4 mb-4">
+      <div className="bg">
+        <img src="/Advent/calendar.jpeg" alt="" />
+      </div>
+      <div className="container pt-4">
         <div className="row justify-content-end">
           <div className="col empty"></div>
           <div className="col empty"></div>
@@ -29,7 +32,9 @@ const Advent = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col">3</div>
+          <div className="col">
+            <Link to={"3"}>3</Link>
+          </div>
           <div className="col">4</div>
           <div className="col">5</div>
           <div className="col">6</div>
@@ -66,8 +71,8 @@ const Advent = () => {
             <Link to="11">11</Link>
             <img
               className="mx-auto d-block"
-              src="/Advent/day_11.jpeg"
-              alt="cloud"
+              src="/Advent/day_11.png"
+              alt="poppy"
             />
           </div>
           <div className="col">12</div>
