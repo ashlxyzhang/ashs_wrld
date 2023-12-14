@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import chroma from "chroma-js";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";

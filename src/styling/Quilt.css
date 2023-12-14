@@ -1,5 +1,24 @@
 .patch {
     width: 100px;
     height: 100px;
-    padding: 10px;
+}
+
+.sticker {
+    object-fit: contain;
+    width: 50px;
+}
+
+.container {
+    width: 500px !important;
+}
+
+.quilt {
+    width: 500px !important;
+    height: fit-content;
+}
+
+.quilt-border {
+    border: 1px dashed pink;
+    height: 600px;
+    position: fixed;
 }
