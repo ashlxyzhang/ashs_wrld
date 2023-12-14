@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import chroma from "chroma-js";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+import "../../styling/Smoothie.css";
 
 const Twelve = () => {
   const ingredients = "🍎🍏🍊🍋🍒🍇🍉🍓🍑🍈🍌🍐🍍🫐🥝🥥🥛🥑🍨🍠";
@@ -28,7 +31,6 @@ const Twelve = () => {
   const ingredientArr = [...ingredients];
   const [ingredientList, setIngredientList] = useState<string[]>([]);
   const [colorList, setColorList] = useState<string[]>([]);
-  const [showSmoothie, setShowSmoothie] = useState(false);
 
   const handleClick = (ingredient: string, index: number) => {
     if (ingredientList.length < 3) {
@@ -37,8 +39,15 @@ const Twelve = () => {
     }
   };
 
-  const blend = () => {
-    if (colorList.length === 3) setShowSmoothie(true);
+  const getColor = () => {
+    if (colorList.length > 2) {
+      return chroma.average(colorList).css();
+    }
+  };
+
+  const clear = () => {
+    setIngredientList([]);
+    setColorList([]);
   };
 
   return (
@@ -62,14 +71,27 @@ const Twelve = () => {
               <span key={index}>{ingredient}</span>
             ))}
           </div>
-          <button
-            onClick={blend}
-            data-toggle="modal"
-            data-target="exampleModalCenter"
-            style={{ width: 50 }}
-          >
-            Blend
-          </button>
+          <div className="d-flex justify-content-center align-items-center">
+            <Popup
+              trigger={
+                <button style={{ width: 50, marginRight: 20 }}>Blend</button>
+              }
+              className="popup-content"
+              modal
+            >
+              <div className="d-flex flex-column justify-content-center align-items-center">
+                <span>{"Enjoy your smoothie <3"}</span>
+                <div
+                  className="filter d-flex justify-content-center align-items-center"
+                  style={{
+                    backgroundColor: getColor(),
+                  }}
+                ></div>
+                <img src="/Advent/smoothie.png" alt="smoothie" id="smoothie" />
+              </div>
+            </Popup>
+            <button onClick={clear}>Clear</button>
+          </div>
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center">
           <span>Choose 3 Ingredients.</span>
@@ -86,7 +108,7 @@ const Twelve = () => {
                 >
                   {ingredient}
                 </span>
-                {ingredient === "🍌" && <div className="w-100"></div>}
+                {/* {ingredient === "🍌" && <div className="w-100"></div>} */}
               </>
             ))}
           </div>

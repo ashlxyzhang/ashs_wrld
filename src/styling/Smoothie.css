@@ -1,0 +1,15 @@
+.popup-content {
+    border-radius: 20px;
+    padding: 50px;
+    width: 40vw;
+}
+
+.filter {
+    width: 380px;
+    height: 380px;
+    margin-top: 30px;
+    border-radius: 200px;
+    z-index: 9999;
+    opacity: 0.5;
+    position: fixed;
+}
