@@ -23,7 +23,7 @@ const Thirteen = () => {
           Make a quilt!
         </span>
         <span>Patches</span>
-        <div className="d-flex flex-wrap container justify-content-center align-items-center">
+        <div className="d-flex flex-wrap patch-container justify-content-center align-items-center">
           {Array.from({ length: 11 }, (_, index) => 1 + index).map(
             (patch, index) => (
               <img

@@ -85,6 +85,11 @@ const Advent = () => {
           </div>
           <div className="col">
             <Link to="13">13</Link>
+            <img
+              className="mx-auto d-block"
+              src="/Advent/quilt/patch2.png"
+              alt="patch"
+            />
           </div>
           <div className="col">14</div>
           <div className="col">15</div>
