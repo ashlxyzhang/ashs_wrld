@@ -91,7 +91,9 @@ const Advent = () => {
               alt="patch"
             />
           </div>
-          <div className="col">14</div>
+          <div className="col">
+            <Link to="14">14</Link>
+          </div>
           <div className="col">15</div>
           <div className="col">16</div>
         </div>
