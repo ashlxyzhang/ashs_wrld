@@ -1,0 +1,42 @@
+.clock {
+    width: 35vh;
+    height: auto;
+    margin-bottom: 15%;
+}
+
+.clock-container {
+    margin: 0 10% 0 10%;
+}
+
+.clock-text {
+    padding: 10px;
+    background-color: rgba(255, 239, 243, 0.903);
+    border: 2px dashed rgb(114, 75, 12);
+}
+
+.hour-hand {
+    width: 10px;
+    height: 80px;
+    background-color: whitesmoke;
+    margin-top: -135px;
+    position: fixed;
+    border: 1px solid grey;
+}
+
+.minute-hand {
+    width: 5px;
+    height: 120px;
+    background-color: whitesmoke;
+    margin-top: -165px;
+    position: fixed;
+    border: 1px solid grey;
+}
+
+.second-hand {
+    width: 4px;
+    height: 140px;
+    background-color: rgb(255, 239, 241);
+    margin-top: -175px;
+    position: fixed;
+    border: 1px solid grey;
+}
