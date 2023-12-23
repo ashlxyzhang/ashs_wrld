@@ -43,14 +43,32 @@ const Fifteen = () => {
         onClick={handleClick}
       />
       <span
-        className={show >= 2 ? "m-4" : "d-none"}
+        className={show === 2 ? "m-4" : "d-none"}
         style={{ width: 400, color: "#244684", textAlign: "center" }}
-        onClick={reset}
+        onClick={handleClick}
       >
         {fortunes[Math.floor(Math.random() * fortunes.length)]}
       </span>
       <img
-        className={show >= 2 ? "m-4" : "d-none"}
+        className={show === 2 ? "m-4" : "d-none"}
+        style={{ width: 500, position: "fixed", zIndex: -1 }}
+        src="/Advent/fortune_3.png"
+        alt="fortune message"
+      />
+      <span
+        className={show === 3 ? "m-4" : "d-none"}
+        style={{ width: 400, color: "#244684", textAlign: "center" }}
+        onClick={reset}
+      >
+        Your lucky numbers:{" "}
+        {Math.floor(Math.random() * 100) +
+          ", " +
+          Math.floor(Math.random() * 100) +
+          ", " +
+          Math.floor(Math.random() * 100)}
+      </span>
+      <img
+        className={show === 3 ? "m-4" : "d-none"}
         style={{ width: 500, position: "fixed", zIndex: -1 }}
         src="/Advent/fortune_3.png"
         alt="fortune message"
