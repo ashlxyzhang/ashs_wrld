@@ -18,11 +18,6 @@ const Fifteen = () => {
     setShow(show + 1);
   };
 
-  const getFortune = () => {
-    console.log(fortunes[Math.floor(Math.random() * fortunes.length)]);
-    return fortunes[5];
-  };
-
   const reset = () => {
     setShow(0);
   };
@@ -52,7 +47,7 @@ const Fifteen = () => {
         style={{ width: 400, color: "#244684", textAlign: "center" }}
         onClick={reset}
       >
-        {getFortune()}
+        {fortunes[Math.floor(Math.random() * fortunes.length)]}
       </span>
       <img
         className={show >= 2 ? "m-4" : "d-none"}
