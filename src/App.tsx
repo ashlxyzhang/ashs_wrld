@@ -11,15 +11,16 @@ import Galaxy from "./components/Galaxy";
 import Advent from "./components/Advent/Advent";
 import One from "./components/Advent/One";
 import Two from "./components/Advent/Two";
+import Three from "./components/Advent/Three";
 import Eight from "./components/Advent/Eight";
 import Nine from "./components/Advent/Nine";
 import Ten from "./components/Advent/Ten";
 import Eleven from "./components/Advent/Eleven";
-import Three from "./components/Advent/Three";
 import Twelve from "./components/Advent/Twelve";
 import Thirteen from "./components/Advent/Thirteen";
 import Fourteen from "./components/Advent/Fourteen";
 import Fifteen from "./components/Advent/Fifteen";
+import Sixteen from "./components/Advent/Sixteen";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -61,7 +62,7 @@ const App = () => {
           <Route path="advent/13" element={<Thirteen />} />
           <Route path="advent/14" element={<Fourteen />} />
           <Route path="advent/15" element={<Fifteen />} />
-          {/* <Route path="advent/16" element={<Sixteen />} /> */}
+          <Route path="advent/16" element={<Sixteen />} />
         </Routes>
       </Router>
       {/* <ItalyGrid images={italyImages} captions={italyCaps} />

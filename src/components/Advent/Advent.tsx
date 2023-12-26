@@ -107,7 +107,9 @@ const Advent = () => {
               alt="pink fortune"
             />
           </div>
-          <div className="col">16</div>
+          <div className="col">
+            <Link to="16">16</Link>
+          </div>
         </div>
         <div className="row">
           <div className="col">17</div>
