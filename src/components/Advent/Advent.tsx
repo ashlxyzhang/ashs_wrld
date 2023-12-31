@@ -109,10 +109,17 @@ const Advent = () => {
           </div>
           <div className="col">
             <Link to="16">16</Link>
+            <img
+              className="mx-auto d-block"
+              src="/Advent/day_16.jpeg"
+              alt="lily of the valley"
+            />
           </div>
         </div>
         <div className="row">
-          <div className="col">17</div>
+          <div className="col">
+            <Link to="17">17</Link>
+          </div>
           <div className="col">18</div>
           <div className="col">19</div>
           <div className="col">20</div>

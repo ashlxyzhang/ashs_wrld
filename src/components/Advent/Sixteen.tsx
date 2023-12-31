@@ -11,12 +11,10 @@ const Sixteen = () => {
   ];
 
   const colorChange = (event: any) => {
-    if (event.target.style.color === "rgb(253, 218, 248)") {
-      for (let i = 0; i <= 1; i += 0.01) {
-        setTimeout(() => {
-          event.target.style.color = scale(i).css();
-        }, i * 2000);
-      }
+    for (let i = 0; i <= 1; i += 0.01) {
+      setTimeout(() => {
+        event.target.style.color = scale(i).css();
+      }, i * 2000);
     }
   };
 
