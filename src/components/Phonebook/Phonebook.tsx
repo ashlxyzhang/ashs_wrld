@@ -33,7 +33,7 @@ const Phonebook = ({ tracks }: Props) => {
         </div>
         <div style={{ color: "grey", margin: 15, width: 60 }}>
           Number
-          <br /> ----------
+          <br /> ---------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}
@@ -59,7 +59,7 @@ const Phonebook = ({ tracks }: Props) => {
         </div>
         <div style={{ color: "grey", margin: 15 }}>
           Artist
-          <br /> ---------------------------
+          <br /> ------------------------
           {tracks.map((track: any, index: number) => (
             <li
               key={index}

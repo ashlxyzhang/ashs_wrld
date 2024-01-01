@@ -40,32 +40,35 @@ const Home = () => {
   };
 
   return (
-    <div
-      className={fadeOut ? "fade-out" : ""}
-      onClick={screenClick}
-      style={{ cursor: "pointer" }}
-    >
-      <div className="bg">
-        <video loop muted autoPlay>
-          <source src="/Home/home.mp4" type="video/mp4" />
-        </video>
-        <div className="screen"></div>
-      </div>
-
-      <section className="caption">
-        <div className="wrapper">
-          <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
-          <div className="center">
-            <h1 className="title">୨୧ ASHS_WRLD ୨୧</h1>
-            <h4 ref={el} className="title" style={{ marginTop: 50 }} />
-            <span>
-              The universe created by 🍎. <br /> It can't represent 1% of her.
-            </span>
-          </div>
-          <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
+    <>
+      <div className="bg vh-100" style={{ backgroundColor: "#0A080B" }}></div>
+      <div
+        className={fadeOut ? "fade-out" : ""}
+        onClick={screenClick}
+        style={{ cursor: "pointer" }}
+      >
+        <div className="bg">
+          <video loop muted autoPlay>
+            <source src="/Home/home.mp4" type="video/mp4" />
+          </video>
+          <div className="screen"></div>
         </div>
-      </section>
-    </div>
+
+        <section className="caption">
+          <div className="wrapper">
+            <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
+            <div className="center">
+              <h1 className="title">୨୧ ASHS_WRLD ୨୧</h1>
+              <h4 ref={el} className="title" style={{ marginTop: 50 }} />
+              <span>
+                The universe created by 🍎. <br /> It can't represent 1% of her.
+              </span>
+            </div>
+            <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

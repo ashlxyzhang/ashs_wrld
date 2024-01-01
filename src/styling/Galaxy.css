@@ -2,6 +2,15 @@
     white-space: pre-wrap;
     font-family: monospace;
     font-weight: bolder;
+    background-color: #0A080B;
+}
+
+.galaxy-text {
+    font-size: 4.5px;
+    color: white;
+    background-color: #0a080b33;
+    font-weight: 1000;
+    z-index: 1;
 }
 
 .fade-in {
@@ -14,4 +23,45 @@
     } to {
         opacity: 1;
     }
+}
+
+.dest-cont {
+    position: absolute;
+}
+
+.destination {
+    position: absolute;
+    background-color: #0a080b53;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    z-index: 2;
+}
+
+.dest-cap {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-family: 'Times Now';
+    z-index: 3;
+    border: dashed white 1.5px;
+    background-color: #0a080b53;
+    padding: 0px 10px;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.dest-cont .destination:hover + .dest-cap {
+    opacity: 1;
+}
+
+#gal-img {
+    height: 100%;
+    padding-left: 4%;
+    position: absolute;
+    z-index: 0;
 }

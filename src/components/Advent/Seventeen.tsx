@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import "../../styling/Cards.css";
 
 const Seventeen = () => {
   const [cards, setCards] = useState<string[]>([]);
+  const [rotate, setRotate] = useState(false);
   const deck = [
     "I",
     "II",
@@ -41,8 +43,20 @@ const Seventeen = () => {
     setCards([]);
   };
 
+  const shuffle = () => {
+    setRotate(true);
+    setTimeout(() => {
+      setRotate(false);
+    }, 2000);
+  };
+
   return (
     <div className="d-flex flex-column vh-100 justify-content-center align-items-center">
+      <div className="d-flex flex-column justify-content-center align-items-center m-4">
+        <span>Tarot Readings</span>
+        <span>Tarot de Marseille</span>
+        <span>Jean Dodal</span>
+      </div>
       <div>
         {cards.map((card, index) => (
           <img
@@ -54,12 +68,14 @@ const Seventeen = () => {
         ))}
       </div>
       <img
-        className="rotate"
+        className={rotate ? "rotate" : ""}
         src="/Advent/cards/back.jpeg"
         alt="card backing"
       />
       <div className="d-flex flex-wrap m-4">
-        <button className="m-2">Shuffle</button>
+        <button onClick={shuffle} className="m-2">
+          Shuffle
+        </button>
         <button onClick={draw} className="m-2">
           Draw
         </button>
