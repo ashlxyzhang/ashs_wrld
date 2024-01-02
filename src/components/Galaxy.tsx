@@ -15,50 +15,60 @@ const Galaxy = () => {
   return (
     <div className="galaxy">
       <div className="d-flex fade-in vh-100 align-items-center justify-content-center">
-        <img
-          className="bg"
-          id="gal-img"
-          src="/Home/galaxy2.jpeg"
-          alt="spiral galaxy"
-        />
-        <span className="galaxy-text">{galaxyText}</span>
-        <div className="dest-cont" style={{ marginBottom: 20 }}>
-          <Link to="/" className="destination" title="Earth (Home)">
-            🌎
-          </Link>
-          <span className="dest-cap" style={{ marginLeft: 50 }}>
-            Earth (Home)
-          </span>
+        <div className="d-flex flex-column title-cont">
+          <h1 className="space-text space-title">
+            Hello... I'm Ashley. <br />
+            It's nice to finally meet you.
+          </h1>
+          <h5 className="space-text space-subtitle">
+            This website is an extension of my mind. <br />
+            Feel free to click around & enjoy.
+          </h5>
+          <div></div>
         </div>
-        <div
-          className="dest-cont"
-          style={{ marginBottom: 170, marginRight: 120 }}
-        >
-          <Link to="/advent" className="destination" title="Advent Calendar">
-            💫
-          </Link>
-          <span className="dest-cap" style={{ marginLeft: 50 }}>
-            Advent Calendar
+        <div className="d-flex gal-cont vh-100 align-items-center justify-content-center">
+          <img className="gal-img" src="/Home/galaxy2.jpeg" />
+          <span className="galaxy-text" style={{ marginRight: "5%" }}>
+            {galaxyText}
           </span>
-        </div>
-        <div className="dest-cont" style={{ marginTop: 220, marginLeft: 120 }}>
-          <Link to="/phonebook" className="destination" title="Phonebook">
-            🪐
-          </Link>
-          <span className="dest-cap" style={{ marginLeft: 50 }}>
-            Phonebook
-          </span>
-        </div>
-        <div
-          className="dest-cont"
-          style={{ marginBottom: 80, marginRight: 270 }}
-        >
-          <Link to="/italy" className="destination" title="Italy Photos">
-            🌌
-          </Link>
-          <span className="dest-cap" style={{ marginLeft: 50 }}>
-            Italy Photos
-          </span>
+          <div
+            className="dest-cont"
+            style={{ marginBottom: "2%", marginRight: "5%" }}
+          >
+            <Link to="/" className="destination">
+              🌎
+            </Link>
+            <div className="dest-cap">
+              <span>Home (Earth)</span>
+            </div>
+          </div>
+          <div
+            className="dest-cont"
+            style={{ marginBottom: "11%", marginRight: "5%" }}
+          >
+            <Link to="/advent" className="destination">
+              💫
+            </Link>
+            <span className="dest-cap">Advent Calendar</span>
+          </div>
+          <div
+            className="dest-cont"
+            style={{ marginTop: "15%", marginLeft: "5%" }}
+          >
+            <Link to="/phonebook" className="destination">
+              🪐
+            </Link>
+            <span className="dest-cap">Phonebook</span>
+          </div>
+          <div
+            className="dest-cont"
+            style={{ marginBottom: "4%", marginRight: "20%" }}
+          >
+            <Link to="/italy" className="destination">
+              🌌
+            </Link>
+            <span className="dest-cap">Italy Photos</span>
+          </div>
         </div>
       </div>
     </div>
