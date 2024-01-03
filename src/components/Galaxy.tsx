@@ -1,17 +1,7 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styling/Galaxy.css";
 
 const Galaxy = () => {
-  const [galaxyText, setGalaxyText] = useState("");
-
-  useEffect(() => {
-    fetch("/Home/galaxy.txt")
-      .then((response) => response.text())
-      .then((text) => setGalaxyText(text))
-      .catch((error) => console.error("Error fetching galaxy:", error));
-  }, []);
-
   return (
     <div className="galaxy">
       <img className="fade-in gal-img" src="/Home/galaxy2.jpeg" />
