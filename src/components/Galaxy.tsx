@@ -13,7 +13,7 @@ const Galaxy = () => {
           </h1>
           <h3 className="space-mid">
             I'm a current freshman engineering honors student at Texas A&M
-            University.
+            University in love with data science and software development.
           </h3>
           <h5 className="space-subtitle">
             This website is an extension of my mind as a galaxy.
