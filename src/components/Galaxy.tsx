@@ -46,7 +46,7 @@ const Galaxy = () => {
           </div>
           <div
             className="dest-cont"
-            style={{ marginBottom: "11%", marginRight: "5%" }}
+            style={{ marginBottom: "11%", marginRight: "15%" }}
           >
             <Link to="/advent" className="destination">
               💫
