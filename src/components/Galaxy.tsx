@@ -8,12 +8,16 @@ const Galaxy = () => {
       <div className="d-flex fade-in vh-100 align-items-center justify-content-center">
         <div className="d-flex space-text flex-column title-cont">
           <h1 className="space-title">
-            Hello! ⭐️ I'm Ashley. <br />
-            It's nice to meet you.
+            Hi! ⭐️ I'm Ashley, it's nice to meet you!
           </h1>
           <h3 className="space-mid">
-            I'm a current freshman engineering honors student at Texas A&M
-            University in love with data science and software development.
+            I am currently a freshman in the Texas A&M Engineering Honors
+            program pursuing a B.S. in Computer Science. My passions include
+            software engineering, data analytics, and surprisingly fashion 👠. I
+            have experience in full-stack web development, machine learning,
+            databases, scripting, and data visualization. Right now, I'm on the
+            lookout for a 2024 summer SWE / data analytics internship so... feel
+            free to message me or email me at ashlxyzhang@tamu.edu! 😊
           </h3>
           <h5 className="space-subtitle">
             This website is an extension of my mind as a galaxy.
