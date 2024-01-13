@@ -36,6 +36,7 @@ const Phonebook = ({ tracks }: Props) => {
           <br /> ---------
           {tracks.map((track: any, index: number) => (
             <li
+              value={track}
               key={index}
               className="d-flex align-items-center"
               style={{ listStyle: "none", height: 70 }}
