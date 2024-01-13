@@ -34,7 +34,7 @@ const Phonebook = ({ tracks }: Props) => {
         <div style={{ color: "grey", margin: 15, width: 60 }}>
           Number
           <br /> ---------
-          {tracks.map((index: number) => (
+          {tracks.map((track: any, index: number) => (
             <li
               key={index}
               className="d-flex align-items-center"
