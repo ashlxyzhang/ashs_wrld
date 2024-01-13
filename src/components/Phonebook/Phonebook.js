@@ -1,0 +1,10 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+const Phonebook = ({ tracks }) => {
+    return (_jsxs(_Fragment, { children: [_jsx("div", { className: "container d-flex justify-content-center align-items-center", style: { marginTop: 30 }, children: _jsx("h1", { children: "Phonebook" }) }), _jsxs("div", { className: "container d-flex justify-content-center align-items-center", style: {
+                    width: "70vw",
+                    border: "1px dashed",
+                    backgroundColor: "#fff7ff",
+                    paddingTop: 40,
+                }, children: [_jsx("div", { style: { color: "grey", margin: 15, marginTop: 60 }, children: tracks.map((track, index) => (_jsx("li", { style: { listStyle: "none", height: 70 }, className: "d-flex align-items-center", children: _jsx("img", { src: track.album.images[2].url, alt: "" }) }, index))) }), _jsxs("div", { style: { color: "grey", margin: 15, width: 60 }, children: ["Number", _jsx("br", {}), " ---------", tracks.map((index) => (_jsx("li", { className: "d-flex align-items-center", style: { listStyle: "none", height: 70 }, children: (index + 1).toString().padStart(3, "0") }, index)))] }), _jsxs("div", { style: { color: "grey", margin: 15 }, children: ["Name", _jsx("br", {}), " -----------------------------------", tracks.map((track, index) => (_jsx("li", { style: { listStyle: "none", height: 70 }, className: "d-flex align-items-center", children: track.name }, index)))] }), _jsxs("div", { style: { color: "grey", margin: 15 }, children: ["Artist", _jsx("br", {}), " ------------------------", tracks.map((track, index) => (_jsx("li", { style: { listStyle: "none", height: 70 }, className: "d-flex align-items-center", children: track.artists[0].name }, index)))] }), _jsxs("div", { className: "align-items-center", style: { color: "grey", margin: 15 }, children: ["Album", _jsx("br", {}), " -----------------------------------------------", tracks.map((track, index) => (_jsx("li", { style: { listStyle: "none", height: 70 }, className: "d-flex align-items-center", children: track.album.name }, index)))] })] })] }));
+};
+export default Phonebook;
