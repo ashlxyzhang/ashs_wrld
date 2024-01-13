@@ -26,17 +26,6 @@ import Seventeen from "./components/Advent/Seventeen";
 const App = () => {
   const italyImages = GetItalyImages();
   const italyCaps = GetItalyCaps();
-  const days = [
-    <One />,
-    <Two />,
-    <Three />,
-    <Eight />,
-    <Nine />,
-    <Ten />,
-    <Eleven />,
-    <Twelve />,
-    <Thirteen />,
-  ];
 
   return (
     <>

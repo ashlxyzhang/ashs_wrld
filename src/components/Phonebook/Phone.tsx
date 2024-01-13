@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 interface Props {
   image: string;
@@ -18,6 +18,7 @@ function Phone({ image, tracks }: Props) {
     const digit = digitPosition(x, y);
     if (digit != -1) {
       setClickedDigit(digit);
+      console.log(clickedDigit);
       setPhoneNumber(phoneNumber + digit);
     }
   };

@@ -39,7 +39,9 @@ function GetToken(id: string, secret: string, redir: string) {
           .then((data) => {
             setToken(data.access_token);
           })
-          .catch((error) => {});
+          .catch((error) => {
+            console.log(error);
+          });
       }
     }
 

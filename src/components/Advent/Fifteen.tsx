@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Fifteen = () => {
   const [show, setShow] = useState(0);
