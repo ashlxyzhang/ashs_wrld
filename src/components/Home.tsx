@@ -35,7 +35,7 @@ const Home = () => {
   const screenClick = () => {
     setFadeOut(true);
     setTimeout(() => {
-      nav("/galaxy");
+      nav("/card");
     }, 500);
   };
 

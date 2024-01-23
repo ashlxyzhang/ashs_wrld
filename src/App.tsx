@@ -7,6 +7,7 @@ import GetItalyCaps from "./components/Italy/ItalyCaps";
 import Tracks from "./components/Phonebook/Tracks";
 import Home from "./components/Home";
 import Galaxy from "./components/Galaxy";
+import Card from "./components/Card";
 
 import Advent from "./components/Advent/Advent";
 import One from "./components/Advent/One";
@@ -33,6 +34,7 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
+          <Route path="card" element={<Card />} />
           <Route path="galaxy" element={<Galaxy />} />
           <Route path="phonebook" element={<Tracks.Tracks />} />
           <Route path="auth/*" element={<Tracks.Tracks />} />
