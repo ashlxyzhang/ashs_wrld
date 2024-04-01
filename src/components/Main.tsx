@@ -1,4 +1,3 @@
-import React from "react";
 import "../styling/Main.css";
 
 const Main = () => {

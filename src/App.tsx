@@ -6,7 +6,7 @@ import GetItalyCaps from "./components/Italy/ItalyCaps";
 
 import Tracks from "./components/Phonebook/Tracks";
 import Home from "./components/Home";
-import Galaxy from "./components/Galaxy";
+// import Galaxy from "./components/Galaxy";
 // import Card from "./components/Card";
 
 import Advent from "./components/Advent/Advent";
