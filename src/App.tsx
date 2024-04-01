@@ -7,7 +7,7 @@ import GetItalyCaps from "./components/Italy/ItalyCaps";
 import Tracks from "./components/Phonebook/Tracks";
 import Home from "./components/Home";
 import Galaxy from "./components/Galaxy";
-import Card from "./components/Card";
+// import Card from "./components/Card";
 
 import Advent from "./components/Advent/Advent";
 import One from "./components/Advent/One";
@@ -23,6 +23,7 @@ import Fourteen from "./components/Advent/Fourteen";
 import Fifteen from "./components/Advent/Fifteen";
 import Sixteen from "./components/Advent/Sixteen";
 import Seventeen from "./components/Advent/Seventeen";
+import Main from "./components/Main";
 
 const App = () => {
   const italyImages = GetItalyImages();
@@ -34,8 +35,9 @@ const App = () => {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
-          <Route path="card" element={<Card />} />
-          <Route path="galaxy" element={<Galaxy />} />
+          <Route path="main" element={<Main />} />
+          {/* {<Route path="card" element={<Card />} />} */}
+          {/* <Route path="galaxy" element={<Galaxy />} /> */}
           <Route path="phonebook" element={<Tracks.Tracks />} />
           <Route path="auth/*" element={<Tracks.Tracks />} />
           <Route

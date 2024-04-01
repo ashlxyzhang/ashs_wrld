@@ -1,8 +1,12 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @font-face {
-    font-family: "Times Now";
-    src: url("./styling/TimesNow-Light.woff2") format("woff");
+  font-family: "Times Now";
+  src: url("./styling/TimesNow-Light.woff2") format("woff");
 }
 
 body {
-    font-family: 'Times Now', Times, serif;
+  font-family: "Times Now", Times, serif;
 }

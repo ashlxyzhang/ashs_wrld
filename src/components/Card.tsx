@@ -21,16 +21,18 @@ const Card = () => {
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
+      alpha: true,
     });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    document.body.appendChild(renderer.domElement);
 
     window.addEventListener("resize", onWindowResize, false);
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
     }
-    renderer.setPixelRatio(window.devicePixelRatio);
-    document.body.appendChild(renderer.domElement);
 
     // const light = new THREE.DirectionalLight(0xffffff, 0.8 * Math.PI);
     // light.position.set(50, 100, 20);
@@ -66,7 +68,7 @@ const Card = () => {
     const animate = () => {
       if (loadedModel) {
         loadedModel.scene.scale.set(15, 15, 15);
-        loadedModel.scene.rotation.y += 0.01;
+        loadedModel.scene.rotation.y += 0.005;
       }
       //   stats.update();
       controls.update();
@@ -77,9 +79,14 @@ const Card = () => {
     animate();
   }, []);
   return (
-    <div>
-      <canvas id="threeJsCanvas" />
-    </div>
+    <>
+      <div className="bg">
+        <img src="/Home/spiral.jpeg" alt="" />
+      </div>
+      <div>
+        <canvas id="threeJsCanvas" />
+      </div>
+    </>
   );
 };
 
