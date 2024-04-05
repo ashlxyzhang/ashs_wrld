@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg vh-100" style={{ backgroundColor: "#0A080B" }}></div>
+      <div className="bg vh-100"></div>
       <div
         className={fadeOut ? "fade-out" : ""}
         onClick={screenClick}

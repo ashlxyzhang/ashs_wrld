@@ -1,6 +1,7 @@
 import "../styling/Main.css";
 import Project from "./Project";
 import getProjectCaptions from "./ProjectCaptions";
+import svgs from "./SVG";
 
 const captions = getProjectCaptions();
 
@@ -9,35 +10,55 @@ const projects = [
   {
     img: "/fintelligent.png",
     name: "Fintelligent",
-    caption: captions[0],
     date: "012024",
     git: "https://github.com/ashlxyzhang/tamuhack_x",
     web: "https://fintelligent.ashs.world/",
+    svgs: [svgs.react, svgs.typescript, svgs.plaid],
   },
   // Whimsiway
   {
-    img: "/Home/galaxy2.jpeg",
+    img: "/whimsiway.png",
     name: "Whimsiway",
-    caption: captions[0],
     date: "022024",
     git: "https://github.com/ericliu-12/WhimsiWay",
-    web: "",
+    web: "https://whimsiway.ashs.world/",
+    svgs: [svgs.flask, svgs.react, svgs.express],
+  },
+  {
+    img: "/collections.png",
+    name: "Curious Collections",
+    date: "032024",
+    git: "https://github.com/ashlxyzhang/build4good",
+    web: "https://collections.ashs.world/",
+    svgs: [svgs.notion, svgs.spotify, svgs.tailwind],
   },
 ];
 
 const Main = () => {
   return (
     <>
-      <div className="flex gap-4 m-4 fade-in">
-        <div className="w-8/12 p-4">
-          {projects.map((project, index) => (
-            <>
-              <Project {...project} number={index + 1} />
-              <hr className="m-8" />
-            </>
-          ))}
+      <div className="flex flex-col md:flex-row gap-4 m-4 fade-in">
+        <div className="md:w-8/12 p-4">
+          {projects.map((project, index) =>
+            index != projects.length - 1 ? (
+              <>
+                <Project
+                  {...project}
+                  number={index + 1}
+                  caption={captions[index]}
+                />
+                <hr className="m-8" />
+              </>
+            ) : (
+              <Project
+                {...project}
+                number={index + 1}
+                caption={captions[index]}
+              />
+            )
+          )}
         </div>
-        <div className="w-4/12 p-4">
+        <div className="p-4">
           <p className="underline">PROJECTS</p>
           <br />
           <p>Projects I've worked on from then 'til now.</p>
