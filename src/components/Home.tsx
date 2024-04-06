@@ -58,8 +58,12 @@ const Home = () => {
           <div className="wrapper">
             <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
             <div className="center">
-              <h1 className="title">୨୧ ASHS_WRLD ୨୧</h1>
-              <h4 ref={el} className="title" style={{ marginTop: 50 }} />
+              <h1 className="title text-4xl">୨୧ ASHS_WRLD ୨୧</h1>
+              <h4
+                ref={el}
+                className="title text-xl"
+                style={{ marginTop: 50 }}
+              />
               <span>
                 The universe created by 🍎. <br /> It can't represent 1% of her.
               </span>

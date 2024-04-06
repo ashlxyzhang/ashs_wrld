@@ -1,4 +1,5 @@
 import "../styling/Main.css";
+import Modal from "./Modal";
 import Project from "./Project";
 import getProjectCaptions from "./ProjectCaptions";
 import svgs from "./SVG";
@@ -46,14 +47,16 @@ const Main = () => {
                   {...project}
                   number={index + 1}
                   caption={captions[index]}
+                  key={index}
                 />
-                <hr className="m-8" />
+                <hr className="m-8" key={index + 1} />
               </>
             ) : (
               <Project
                 {...project}
                 number={index + 1}
                 caption={captions[index]}
+                key={index}
               />
             )
           )}
@@ -63,7 +66,7 @@ const Main = () => {
           <br />
           <p>Projects I've worked on from then 'til now.</p>
           <br />
-          <p>Email</p>
+          <Modal />
           <a
             href="https://www.instagram.com/ashs_wrld/"
             target="_blank"

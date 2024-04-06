@@ -1,5 +1,3 @@
-import svgs from "./SVG";
-
 interface Props {
   img: string;
   number: number;
@@ -43,7 +41,7 @@ const Project = ({
           <div className="flex gap-4">
             {svgs.map((svg, index) =>
               svg.includes("https") ? (
-                <img className="h-6" src={svg} />
+                <img className="h-6" src={svg} key={index} />
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
