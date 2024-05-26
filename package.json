@@ -21,6 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
+    "react-sequence-animator": "^2.3.0",
     "reactjs-popup": "^2.0.6",
     "stats.js": "^0.17.0",
     "typed.js": "^2.1.0"
@@ -44,6 +45,7 @@
     "http-proxy-middleware": "^2.0.6",
     "postcss": "^8.4.38",
     "request": "^2.88.2",
+    "sass": "^1.77.2",
     "tailwindcss": "^3.4.3",
     "three": "^0.160.1",
     "typescript": "^5.0.2",

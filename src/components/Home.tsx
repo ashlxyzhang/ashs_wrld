@@ -58,7 +58,7 @@ const Home = () => {
           <div className="wrapper">
             <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
             <div className="center">
-              <h1 className="title text-4xl">୨୧ ASHS_WRLD ୨୧</h1>
+              <h1 className="title text-4xl w-full">୨୧ ASHS_WRLD ୨୧</h1>
               <h4
                 ref={el}
                 className="title text-xl"

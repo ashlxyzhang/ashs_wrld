@@ -66,7 +66,7 @@ export default function Modal() {
                             type="email"
                             name="email"
                             autoComplete="email"
-                            placeholder="(enter your email address)..."
+                            placeholder="(your email address...)"
                           />
                         </div>
                         <hr className="mt-3 mb-3" />

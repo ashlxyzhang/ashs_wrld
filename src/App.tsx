@@ -23,6 +23,7 @@ import Fourteen from "./components/Advent/Fourteen";
 import Fifteen from "./components/Advent/Fifteen";
 import Sixteen from "./components/Advent/Sixteen";
 import Seventeen from "./components/Advent/Seventeen";
+import Projects from "./components/Projects";
 import Main from "./components/Main";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="main" element={<Main />} />
+          <Route path="projects" element={<Projects />} />
           {/* {<Route path="card" element={<Card />} />} */}
           {/* <Route path="galaxy" element={<Galaxy />} /> */}
           <Route path="phonebook" element={<Tracks.Tracks />} />
