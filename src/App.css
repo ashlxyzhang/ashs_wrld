@@ -7,8 +7,18 @@
   src: url("./styling/TimesNow-Light.woff2") format("woff");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("./styling/Inter/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype");
+}
+
 body {
   font-family: "Times Now", Times, serif;
+}
+
+.inter {
+  font-family: "Inter";
 }
 
 input:-webkit-autofill,
