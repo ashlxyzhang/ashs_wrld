@@ -1,13 +1,15 @@
 import { Link, Outlet } from "react-router-dom";
 import "../../styling/Advent.css";
+import Header from "../Header";
 
 const Advent = () => {
   return (
     <>
+      <Header />
       <div className="bg">
         <img src="/Advent/calendar.jpeg" alt="" />
       </div>
-      <div className="container pt-4">
+      <div className="container pt-32">
         <div className="row justify-content-end">
           <div className="col empty"></div>
           <div className="col empty"></div>

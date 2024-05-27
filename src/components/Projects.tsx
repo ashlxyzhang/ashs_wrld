@@ -1,4 +1,5 @@
 import "../styling/Main.css";
+import Header from "./Header";
 import Modal from "./Modal";
 import Project from "./Project";
 import getProjectCaptions from "./ProjectCaptions";
@@ -35,10 +36,11 @@ const projects = [
   },
 ];
 
-const Main = () => {
+const Projects = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-4 m-4 fade-in">
+      <Header />
+      <div className="flex flex-col md:flex-row gap-4 pt-32 mr-4 ml-4">
         <div className="p-4">
           <p className="underline">PROJECTS</p>
           <br />
@@ -91,4 +93,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Projects;
