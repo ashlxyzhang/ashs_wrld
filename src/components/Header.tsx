@@ -1,12 +1,11 @@
-import React from "react";
-
+import "../styling/Main.css";
 const Header = () => {
   return (
-    <div className="flex w-100 justify-between inter text-xl font-medium">
-      <div className="flex pl-24 p-16 gap-3 items-center">
+    <div className="flex header w-100 justify-between inter text-lg font-medium pt-12">
+      <div className="flex pl-24 gap-3 items-center">
         <p className="">Ash&rsquo;s World</p>
         <svg
-          className="w-6 h-6 fill-none stroke-2 stroke-pink-300 hover:stroke-pink-400"
+          className="w-6 h-6 fill-none stroke-2 stroke-[#e79a8f] hover:stroke-[#BF6E64]"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -18,11 +17,11 @@ const Header = () => {
         </svg>
       </div>
 
-      <div className="flex gap-12 pr-24 p-16">
-        <button>Projects</button>
-        <button>Calendar</button>
-        <button>Resume</button>
-        <button>Blender</button>
+      <div className="flex gap-12 pr-24">
+        <button className="nav-btn">Projects</button>
+        <button className="nav-btn">Calendar</button>
+        <button className="nav-btn">Resume</button>
+        <button className="nav-btn">Blender</button>
       </div>
     </div>
   );

@@ -14,11 +14,29 @@
 .bg-main {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: fit;
   position: absolute;
   z-index: -1;
 }
 
 .gray-text {
   color: #828282;
+}
+
+.nav-btn {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.custom-btn,
+.nav-btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px #e79a8f;
+  -moz-box-shadow: inset 0px 0px 0px 1.5px #e79a8f;
+  box-shadow: inset 0px 0px 0px 1.5px #e79a8f;
+}
+
+.header {
+  position: fixed;
+  z-index: 1000;
 }
