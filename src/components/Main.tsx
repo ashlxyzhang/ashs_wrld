@@ -18,9 +18,9 @@ const Main = () => {
     <div className="fade-in">
       <img className="bg-main" src="Home/ombre_bg.png" alt="" />
       <Header />
-      <div className="flex flex-col lg:flex-row h-screen justify-between">
+      <div className="inter flex flex-col lg:flex-row h-screen justify-between">
         <div className="flex flex-col text-center justify-center items-center gap-8 p-24 lg:w-[55%]">
-          <h1 className="font-bold text-6xl">Hi! I'm Ashley.</h1>
+          <h1 className="font-bold text-6xl">Hi! I&rsquo;m Ashley.</h1>
           <p className="text-2xl gray-text leading-normal font-light">
             Welcome to my website, Ash&rsquo;s World. <br /> <br />
             I&rsquo;m an incoming sophomore in the Texas A&M Engineering Honors

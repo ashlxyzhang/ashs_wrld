@@ -45,7 +45,7 @@ const Projects = () => {
           <p className="underline">PROJECTS</p>
           <br />
           <p>
-            Projects I've worked on since I started coding. Done @ A&M and
+            Projects I&rsquo;ve worked on since I started coding. Done @ A&M and
             individually.
           </p>
           <br />

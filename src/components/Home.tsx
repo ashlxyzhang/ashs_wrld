@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="times-now">
       <div className="bg vh-100"></div>
       <div
         className={fadeOut ? "fade-out" : ""}
@@ -64,15 +64,13 @@ const Home = () => {
                 className="title text-xl"
                 style={{ marginTop: 50 }}
               />
-              <span>
-                The universe created by 🍎. <br /> It can't represent 1% of her.
-              </span>
+              <span>The universe created by 🍎.</span>
             </div>
             <span>⋅˚₊‧ ୨୧ ‧₊˚ ⋅</span>
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

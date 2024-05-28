@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../styling/Main.css";
 const Header = () => {
   return (
-    <div className="flex header w-100 justify-between text-lg font-medium pt-12">
+    <div className="flex header w-100 justify-between text-lg font-normal pt-12">
       <div className="flex pl-24 gap-3 items-center">
         <p className="">Ash&rsquo;s World</p>
         <Link to="/main">
