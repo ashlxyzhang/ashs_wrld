@@ -40,7 +40,29 @@ const Projects = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col md:flex-row gap-4 pt-32 mr-4 ml-4">
+      <div className="flex flex-col-reverse md:flex-row gap-4 pt-32 mr-4 ml-4">
+        <div className="md:w-8/12 p-4">
+          {projects.map((project, index) =>
+            index != projects.length - 1 ? (
+              <>
+                <Project
+                  {...project}
+                  number={index + 1}
+                  caption={captions[index]}
+                  key={index}
+                />
+                <hr className="m-8" key={index + 1} />
+              </>
+            ) : (
+              <Project
+                {...project}
+                number={index + 1}
+                caption={captions[index]}
+                key={index}
+              />
+            )
+          )}
+        </div>
         <div className="p-4">
           <p className="underline">PROJECTS</p>
           <br />
@@ -65,28 +87,6 @@ const Projects = () => {
           >
             GitHub
           </a>
-        </div>
-        <div className="md:w-8/12 p-4">
-          {projects.map((project, index) =>
-            index != projects.length - 1 ? (
-              <>
-                <Project
-                  {...project}
-                  number={index + 1}
-                  caption={captions[index]}
-                  key={index}
-                />
-                <hr className="m-8" key={index + 1} />
-              </>
-            ) : (
-              <Project
-                {...project}
-                number={index + 1}
-                caption={captions[index]}
-                key={index}
-              />
-            )
-          )}
         </div>
       </div>
     </>
