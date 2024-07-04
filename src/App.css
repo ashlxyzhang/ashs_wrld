@@ -17,8 +17,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.times-now {
-  font-family: "Times Now", Times, serif;
+.helv {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.times {
+  font-family: Times, serif;
 }
 
 .inter {

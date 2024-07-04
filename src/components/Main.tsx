@@ -18,18 +18,22 @@ const Main = () => {
     <div className="fade-in">
       <img className="bg-main" src="Home/ombre_bg.png" alt="" />
       <Header />
-      <div className="inter flex flex-col lg:flex-row h-screen justify-between">
-        <div className="flex flex-col text-center justify-center items-center gap-8 p-24 lg:w-[55%]">
-          <h1 className="font-bold text-6xl">Hi! I&rsquo;m Ashley.</h1>
-          <p className="text-2xl gray-text leading-normal font-light">
-            Welcome to my website, Ash&rsquo;s World. <br /> <br />
-            I&rsquo;m an incoming sophomore in the Texas A&M Engineering Honors
-            program pursuing a B.S. in Computer Science. I love full-stack web
-            development, cloud computing, shoegaze, fashion, and Blender.
+      <div className="inter flex flex-col lg:flex-row h-screen justify-center items-center">
+        <div className="flex flex-col justify-center gap-8 p-24 lg:w-[55%]">
+          <h1 className="font-bold times italic bold text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)] w-4/5">
+            Ashley Zhang
+          </h1>
+          <p className="text-xl helv leading-normal font-light w-4/5">
+            Hi! I&rsquo;m Ashley. I&rsquo;m currently pursuing a B.S. in
+            Computer Science with a minor in Statistics through the Texas A&M
+            Engineering Honors program. <br /> <br />
+            I'm experienced in full-stack web development, cloud computing,
+            scripting, and web scraping. For Summer 2025, I&rsquo;m looking for
+            software engineering or quant development internships.
           </p>
-          <Link className="nav-btn custom-btn" to="/projects">
+          {/* <Link className="nav-btn custom-btn" to="/projects">
             See my projects!
-          </Link>
+          </Link> */}
         </div>
         <div className="flex items-end lg:w-[45%]">
           <img
