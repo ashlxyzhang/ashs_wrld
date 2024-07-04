@@ -24,10 +24,17 @@ const Header = () => {
         <Link className="nav-btn" to="/projects">
           Projects
         </Link>
-        <Link className="nav-btn" to="/advent">
+        {/* <Link className="nav-btn" to="/advent">
           Calendar
-        </Link>
-        <button className="nav-btn">Resume</button>
+        </Link> */}
+        <a
+          href="/ashley_zhang.pdf"
+          className="nav-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
         <button className="nav-btn">Blender</button>
       </div>
     </div>
