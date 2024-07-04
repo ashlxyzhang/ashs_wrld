@@ -40,7 +40,7 @@ const Home = () => {
   };
 
   return (
-    <div className="times-now">
+    <div className="times">
       <div className="bg vh-100"></div>
       <div
         className={fadeOut ? "fade-out" : ""}

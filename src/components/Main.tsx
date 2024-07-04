@@ -18,7 +18,7 @@ const Main = () => {
     <div className="fade-in">
       <img className="bg-main" src="Home/ombre_bg.png" alt="" />
       <Header />
-      <div className="inter flex flex-col lg:flex-row h-screen justify-center items-center">
+      <div className="flex flex-col lg:flex-row h-screen justify-center items-center">
         <div className="flex flex-col justify-center gap-8 p-24 lg:w-[55%]">
           <h1 className="font-bold times italic bold text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)] w-4/5">
             Ashley Zhang
