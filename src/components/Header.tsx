@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import "../styling/Main.css";
+
 const Header = () => {
   return (
-    <div className="flex header w-100 justify-between text-lg font-normal pt-12">
-      <div className="flex pl-24 gap-3 items-center">
-        <p className="">Ash&rsquo;s World</p>
+    <nav className="flex justify-between w-full md:w-[768px] py-8 mb-4">
+      <div className="flex gap-3 items-center">
+        <p className="hidden md:block lg:block">Ash&rsquo;s World</p>
         <Link to="/main">
           <svg
-            className="w-6 h-6 fill-none stroke-2 stroke-[#e79a8f] hover:stroke-[#BF6E64]"
+            className="w-6 h-6 fill-none stroke-2 stroke-orange hover:stroke-[#BF6E64]"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -19,9 +20,8 @@ const Header = () => {
           </svg>
         </Link>
       </div>
-
-      <div className="flex gap-12 pr-24">
-        <Link className="nav-btn" to="/projects">
+      <div className="flex gap-4 sm:gap-8">
+        <Link className="hover:text-orange" to="/projects">
           Projects
         </Link>
         {/* <Link className="nav-btn" to="/advent">
@@ -29,15 +29,15 @@ const Header = () => {
         </Link> */}
         <a
           href="/ashley_zhang.pdf"
-          className="nav-btn"
+          className="hover:text-orange"
           target="_blank"
           rel="noopener noreferrer"
         >
           Resume
         </a>
-        <button className="nav-btn">Blender</button>
+        <button className="hover:text-orange">Blender</button>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -31,7 +31,7 @@ const Project = ({
               <p className="text-pink-300">
                 {number.toString().padStart(2, "0")}
               </p>
-              <p className="underline">{name.toLocaleUpperCase()}</p>
+              <p>{name.toLocaleUpperCase()}</p>
             </div>
             <p>{caption}</p>
           </div>

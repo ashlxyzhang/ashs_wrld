@@ -2,32 +2,13 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@font-face {
-  font-family: "Times Now";
-  src: url("./styling/TimesNow-Light.woff2") format("woff");
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("./styling/Inter/Inter-VariableFont_slnt,wght.ttf")
-    format("truetype");
-}
-
 body {
-  font-family: "Inter", sans-serif;
-}
-
-.helv {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .times {
   font-family: Times, serif;
-}
-
-.inter {
-  font-family: "Inter", sans-serif;
 }
 
 input:-webkit-autofill,

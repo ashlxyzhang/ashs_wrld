@@ -1,4 +1,5 @@
 import "../styling/Main.css";
+import Footer from "./Footer";
 import Header from "./Header";
 import Modal from "./Modal";
 import Project from "./Project";
@@ -38,58 +39,58 @@ const projects = [
 
 const Projects = () => {
   return (
-    <>
-      <Header />
-      <div className="flex flex-col-reverse md:flex-row gap-4 pt-32 mr-4 ml-4">
-        <div className="md:w-8/12 p-4">
-          {projects.map((project, index) =>
-            index != projects.length - 1 ? (
-              <>
+    <main className="w-full flex justify-center fade-in">
+      <div className="flex flex-col max-w-screen-xl mx-6 min-h-dvh">
+        <div className="flex w-full justify-center">
+          <Header />
+        </div>
+        <div className="flex flex-col-reverse md:flex-row gap-4 sm:mx-4">
+          <div className="md:w-8/12">
+            {projects.map((project, index) =>
+              index != projects.length - 1 ? (
+                <>
+                  <Project
+                    {...project}
+                    number={index + 1}
+                    caption={captions[index]}
+                    key={index}
+                  />
+                  <hr className="m-8" key={index + 1} />
+                </>
+              ) : (
                 <Project
                   {...project}
                   number={index + 1}
                   caption={captions[index]}
                   key={index}
                 />
-                <hr className="m-8" key={index + 1} />
-              </>
-            ) : (
-              <Project
-                {...project}
-                number={index + 1}
-                caption={captions[index]}
-                key={index}
-              />
-            )
-          )}
+              )
+            )}
+          </div>
+          <div className="flex flex-col md:w-4/12 sm:mx-6 gap-4">
+            <p className="font-bold times italic text-6xl sm:text-7xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
+              Projects
+            </p>
+            <Modal />
+            <a
+              href="https://www.instagram.com/ashs_wrld/"
+              target="_blank"
+              className="underline"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://github.com/ashlxyzhang/"
+              target="_blank"
+              className="underline"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
-        <div className="p-4">
-          <p className="underline">PROJECTS</p>
-          <br />
-          <p>
-            Projects I&rsquo;ve worked on since I started coding. Done @ A&M and
-            individually.
-          </p>
-          <br />
-          <Modal />
-          <a
-            href="https://www.instagram.com/ashs_wrld/"
-            target="_blank"
-            className="underline"
-          >
-            Instagram
-          </a>
-          <br />
-          <a
-            href="https://github.com/ashlxyzhang/"
-            target="_blank"
-            className="underline"
-          >
-            GitHub
-          </a>
-        </div>
+        <Footer />
       </div>
-    </>
+    </main>
   );
 };
 
