@@ -21,8 +21,8 @@ const Main = () => {
         <Header />
         <main className="flex flex-col items-center w-full h-full gap-16">
           <section className="flex flex-col justify-between gap-8">
-            <h1 className="font-bold times italic text-7xl sm:text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
-              Ashley Zhang
+            <h1 className="times italic text-7xl sm:text-8xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
+              <strong>Ashley Zhang</strong>
             </h1>
             <p className="text-l sm:text-xl w-full sm:w-3/4 helv font-light">
               Hi! I&rsquo;m Ashley. I&rsquo;m currently pursuing a B.S. in
