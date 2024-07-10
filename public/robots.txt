@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /
+
+User-agent: Googlebot
+User-agent: DuckDuckBot
+User-agent: bingbot
+User-agent: archive.org_bot
+Disallow:
+
+Sitemap: https://www.ashs.world/sitemap.xml
+
+#      |\---/|
+#      | ,_, |
+#       \_`_/-..----.
+#    ___/ `   ' ,""+ \  az
+#   (__...'   __\    |`.___.';
+#     (_,...'(_,.`__)/'.....+
