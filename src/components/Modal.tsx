@@ -1,5 +1,6 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import svgs from "./SVG";
 
 export default function Modal() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,15 @@ export default function Modal() {
   return (
     <>
       <a className="cursor-pointer underline" onClick={emailClick}>
-        Email <br />
+        <svg
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d={svgs.email} />
+        </svg>
       </a>
       <Transition.Root show={open} as={Fragment}>
         <Dialog

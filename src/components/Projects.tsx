@@ -44,7 +44,7 @@ const Projects = () => {
         <div className="flex w-full justify-center">
           <Header />
         </div>
-        <div className="flex flex-col-reverse md:flex-row gap-4 sm:mx-4">
+        <div className="flex flex-col-reverse md:flex-row gap-4 md:mx-4">
           <div className="md:w-8/12">
             {projects.map((project, index) =>
               index != projects.length - 1 ? (
@@ -67,31 +67,58 @@ const Projects = () => {
               )
             )}
           </div>
-          <div className="flex flex-col md:w-4/12 sm:mx-6 gap-4">
-            <p className="font-bold times italic text-6xl sm:text-7xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
+          <div className="flex flex-col md:w-4/12 md:mx-6 gap-4">
+            <p className="font-bold times italic text-6xl md:text-7xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
               Projects
             </p>
-            <Modal />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 fill-slate-600"
-            >
-              <path d={svgs.email} />
-            </svg>
-            <a
-              href="https://www.instagram.com/ashs_wrld/"
-              target="_blank"
-              className="underline"
-            >
-              Instagram
-            </a>
-            <a
-              href="https://github.com/ashlxyzhang/"
-              target="_blank"
-              className="underline"
-            >
-              GitHub
-            </a>
+            <div className="flex gap-4">
+              <Modal />
+              <a
+                href="https://linkedin.com/in/ashley-j-zhang/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d={svgs.linkedin}></path>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/ashlxyzhang/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d={svgs.github}></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/ashs_wrld/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <svg
+                  viewBox="4 4 24 24"
+                  className="w-8 h-8 md:w-10 md:h-10 fill-slate-600 hover:fill-orange"
+                >
+                  <path d={svgs.instagram} />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <Footer />

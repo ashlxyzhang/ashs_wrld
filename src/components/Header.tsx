@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styling/Main.css";
+import svgs from "./SVG";
 
 const Header = () => {
   return (
@@ -8,15 +9,10 @@ const Header = () => {
         <p className="hidden md:block lg:block">Ash&rsquo;s World</p>
         <Link to="/">
           <svg
-            className="w-6 h-6 fill-none stroke-2 stroke-orange hover:stroke-[#BF6E64]"
+            className="w-6 h-6 fill-none stroke-2 stroke-orange hover:stroke-dark-orange"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-            <path d="M3.6 9h16.8"></path>
-            <path d="M3.6 15h16.8"></path>
-            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
-            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+            <path d={svgs.globe}></path>
           </svg>
         </Link>
       </div>
