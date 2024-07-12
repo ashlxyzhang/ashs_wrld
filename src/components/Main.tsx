@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import "../styling/Main.css";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
 const Main = () => {

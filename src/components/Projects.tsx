@@ -72,6 +72,12 @@ const Projects = () => {
               Projects
             </p>
             <Modal />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 fill-slate-600"
+            >
+              <path d={svgs.email} />
+            </svg>
             <a
               href="https://www.instagram.com/ashs_wrld/"
               target="_blank"
