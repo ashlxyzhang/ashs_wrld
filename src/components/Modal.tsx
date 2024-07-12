@@ -19,8 +19,8 @@ export default function Modal() {
       <a className="cursor-pointer underline" onClick={emailClick}>
         <svg
           viewBox="0 0 24 24"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
           xmlns="http://www.w3.org/2000/svg"
         >

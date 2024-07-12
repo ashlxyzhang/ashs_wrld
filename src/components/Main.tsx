@@ -3,6 +3,7 @@ import "../styling/Main.css";
 import Header from "./Header";
 // import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Socials from "./Socials";
 
 const Main = () => {
   // const [currImg, setCurrImg] = useState(0);
@@ -32,6 +33,7 @@ const Main = () => {
               scripting, and web scraping. For Summer 2025, I&rsquo;m looking
               for software engineering or quant development internships.
             </p>
+            <Socials />
             {/* <Link className="nav-btn custom-btn" to="/projects">
             See my projects!
           </Link> */}

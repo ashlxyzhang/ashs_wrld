@@ -58,8 +58,8 @@ const Project = ({
           <div className="flex gap-2">
             <a href={git} target="_blank" rel="noopener noreferrer">
               <svg
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="w-6 h-6 fill-none stroke-2 stroke-pink-300 hover:stroke-pink-400"
                 xmlns="http://www.w3.org/2000/svg"
               >

@@ -1,10 +1,10 @@
 import "../styling/Main.css";
 import Footer from "./Footer";
 import Header from "./Header";
-import Modal from "./Modal";
 import Project from "./Project";
 import getProjectCaptions from "./ProjectCaptions";
 import svgs from "./SVG";
+import Socials from "./Socials";
 
 const captions = getProjectCaptions();
 
@@ -53,9 +53,8 @@ const Projects = () => {
                     {...project}
                     number={index + 1}
                     caption={captions[index]}
-                    key={index}
                   />
-                  <hr className="m-8" key={index + 1} />
+                  <hr className="m-8" />
                 </>
               ) : (
                 <Project
@@ -71,54 +70,7 @@ const Projects = () => {
             <p className="font-bold times italic text-6xl md:text-7xl text-white drop-shadow-[0_1.2px_1.2px_rgba(100,0,0,0.8)]">
               Projects
             </p>
-            <div className="flex gap-4">
-              <Modal />
-              <a
-                href="https://linkedin.com/in/ashley-j-zhang/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d={svgs.linkedin}></path>
-                </svg>
-              </a>
-              <a
-                href="https://github.com/ashlxyzhang/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="w-8 h-8 md:w-10 md:h-10 stroke-2 fill-none stroke-slate-600 hover:stroke-orange"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d={svgs.github}></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/ashs_wrld/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline"
-              >
-                <svg
-                  viewBox="4 4 24 24"
-                  className="w-8 h-8 md:w-10 md:h-10 fill-slate-600 hover:fill-orange"
-                >
-                  <path d={svgs.instagram} />
-                </svg>
-              </a>
-            </div>
+            <Socials />
           </div>
         </div>
         <Footer />
