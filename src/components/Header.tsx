@@ -24,7 +24,7 @@ const Header = () => {
           Calendar
         </Link> */}
         <a
-          href="/ashley_zhang.pdf"
+          href="/ashley_zhang_resume.pdf"
           className="hover:text-orange"
           target="_blank"
           rel="noopener noreferrer"

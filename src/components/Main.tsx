@@ -30,8 +30,7 @@ const Main = () => {
               Computer Science with a minor in Statistics through the Texas A&M
               Engineering Honors program. <br /> <br />
               I'm experienced in full-stack web development, cloud computing,
-              scripting, and web scraping. For Summer 2025, I&rsquo;m looking
-              for software engineering or quant development internships.
+              scripting, and web scraping. Prev @ Netflix, Scale AI.
             </p>
             <Socials />
             {/* <Link className="nav-btn custom-btn" to="/projects">
